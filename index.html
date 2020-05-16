@@ -1,90 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/*
-  AUTO GRID
-  Set the minimum item size with `--auto-grid-min-size` and you'll
-  get a fully responsive grid with no media queries.
-*/
-.auto-grid {
-  --auto-grid-min-size: 16rem;
-  
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 1rem;
-}
+<body>
 
+<audio id="myAudio">
+  <source src="https://notificationsounds.com/message-tones/chime-351/download/mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
-/* Presentational styles */
+<p>Click the buttons to play or pause the audio.</p>
 
-body {
-  background: #efefef;
-  padding: 1rem;
-  line-height: 1.4;
-  font-family: sans-serif;
-}
+<button onclick="playAudio()" type="button">Play Audio</button>
 
-li {
-  padding: 3rem 1rem;
-  text-align: center;
-  font-size: 1.2rem;
-  background-color:#aaa;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-ul {
-margin: 0;
-padding: 0;
-}
-  
-</style>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-var foo = document.createElement('audio');
-foo.autoplay = false;
-foo.src = 'https://notificationsounds.com/christmas-ringtones/another-hand-bell-309/download/mp3';
+var x = document.getElementById("myAudio"); 
 
-$(document).ready(function(){
-  $("#fade1").click(function(){
-  
-//foo.src = 'https://nitinnaikwadi1.github.io/learning//audio/bell.mp3';
+function playAudio() { 
+  x.play(); 
+} 
 
-    $("#div1").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150
-    var audio = document.getElementById("audio");
-        audio.play();
-  });
-  
-  $("#fade2").click(function(){
-    $("#div2").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
-  });
-  
-  $("#fade3").click(function(){
-    $("#div3").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
-  });
-  
-  $("#fade4").click(function(){
-    $("#div4").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
-  });
-});
 </script>
 
-
-</head>
-<body>
-<audio id="audio" src="https://notificationsounds.com/christmas-ringtones/another-hand-bell-309/download/mp3"></audio>
-
-  <ul class="auto-grid" style="list-style-type:none;">
-  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://nitinnaikwadi1.github.io/learning/images/phool.png');"></li></a>
-  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://www.w3schools.com/cssref/mountain.jpg');"></li></a>
-  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://www.w3schools.com/cssref/mountain.jpg');"></li></a>
-  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://www.w3schools.com/cssref/mountain.jpg');"></li></a>
-  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://www.w3schools.com/cssref/mountain.jpg');"></li></a>
-  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://www.w3schools.com/cssref/mountain.jpg');"></li></a>
-</ul>
 </body>
 </html>
