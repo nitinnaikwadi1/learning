@@ -46,41 +46,63 @@ body {
   background-color: #f1f1f1;
 }
 </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#fade1").click(function(){
+    $("#div1").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+  });
+  
+  $("#fade2").click(function(){
+    $("#div2").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+  });
+  
+  $("#fade3").click(function(){
+    $("#div3").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+  });
+  
+  $("#fade4").click(function(){
+    $("#div4").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+  });
+});
+</script>
+
+
 </head>
 <body>
 
 <div class="row">
-  <div class="column">
+<a id="fade1" href="#">
+  <div class="column" id="div1">
     <div class="card">
       <h3>Card 1</h3>
-      <p>Some text</p>
-      <p>Some text</p>
     </div>
   </div>
-
-  <div class="column">
+</a>
+<a id="fade2" href="#">
+  <div class="column" id="div2">
     <div class="card">
       <h3>Card 2</h3>
-      <p>Some text</p>
-      <p>Some text</p>
     </div>
   </div>
+  </a>
 </div>
 
 <div class="row">
-  <div class="column">
+
+  <a id="fade3" href="#">
+  <div class="column" id="div3">
     <div class="card">
-      <h3>Card 1</h3>
-      <p>Some text</p>
-      <p>Some text</p>
+      <h3>Card 3</h3>
     </div>
   </div>
 
-  <div class="column">
+    </a>
+    <a id="fade4" href="#">
+  <div class="column" id="div4">
     <div class="card">
-      <h3>Card 2</h3>
-      <p>Some text</p>
-      <p>Some text</p>
+      <h3>Card 4</h3>
     </div>
   </div>
 </div>
