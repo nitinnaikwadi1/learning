@@ -3,53 +3,37 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
-  box-sizing: border-box;
+/*
+  AUTO GRID
+  Set the minimum item size with `--auto-grid-min-size` and you'll
+  get a fully responsive grid with no media queries.
+*/
+.auto-grid {
+  --auto-grid-min-size: 16rem;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
 }
+
+
+/* Presentational styles */
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background: #efefef;
+  padding: 1rem;
+  line-height: 1.4;
+  font-family: sans-serif;
 }
 
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 50%;
-  padding: 0 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  margin: 5px;
+li {
+  padding: 5rem 1rem;
   text-align: center;
-  background-color: #f1f1f1;
-}
- 
-.img1{
-  background-image:url(images/img0.png);
-   background-repeat: no-repeat;
-  background-size: auto;
+  font-size: 1.2rem;
+  background-color:#aaa;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
 }
   
 </style>
@@ -79,6 +63,21 @@ $(document).ready(function(){
 </head>
 <body>
 
+  <ul class="auto-grid">
+  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://www.w3schools.com/cssref/mountain.jpg');">Item 1</li></a>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+  <li>Item 6</li>
+  <li>Item 7</li>
+  <li>Item 8</li>
+  <li>Item 9</li>
+  <li>Item 10</li>
+  <li>Item 11</li>
+  <li>Item 12</li>
+</ul>
+  
 <div class="row">
 <a id="fade1" href="#">
   <div class="column" id="div1">
