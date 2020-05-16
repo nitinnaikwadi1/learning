@@ -1,98 +1,112 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/*
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /*
   AUTO GRID
   Set the minimum item size with `--auto-grid-min-size` and you'll
   get a fully responsive grid with no media queries.
 */
-.auto-grid {
-  --auto-grid-min-size: 16rem;
-  
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 1rem;
-}
+    .auto-grid {
+      --auto-grid-min-size: 16rem;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+      grid-gap: 1rem;
+    }
 
 
-/* Presentational styles */
+    /* Presentational styles */
 
-body {
-  background: #efefef;
-  padding: 1rem;
-  line-height: 1.4;
-  font-family: sans-serif;
-}
+    body {
+      background: #efefef;
+      padding: 1rem;
+      line-height: 1.4;
+      font-family: sans-serif;
+    }
 
-li {
-  padding: 3rem 1rem;
-  text-align: center;
-  font-size: 1.2rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+    li {
+      padding: 3rem 1rem;
+      text-align: center;
+      font-size: 1.2rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
 
-ul {
-margin: 0;
-padding: 0;
-}
-  
-</style>
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 
-<script>
-$(document).ready(function(){
- $("#fade1").click(function(){
-    $("#div1").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
-  });
- 
- $("#fade2").click(function(){
-    $("#div2").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
-  });
-  
- $("#fade3").click(function(){
-    $("#div3").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
-  });
-  
- $("#fade4").click(function(){
-    $("#div4").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
-  });
-  
- $("#fade5").click(function(){
-    $("#div5").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
-  });
-  
- $("#fade6").click(function(){
-    $("#div6").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
-  });
-  });
-</script>
+  <script>
+    $(document).ready(function () {
+      $("#fade1").click(function () {
+        $("#div1").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+      });
+
+      $("#fade2").click(function () {
+        $("#div2").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+      });
+
+      $("#fade3").click(function () {
+        $("#div3").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+      });
+
+      $("#fade4").click(function () {
+        $("#div4").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+      });
+
+      $("#fade5").click(function () {
+        $("#div5").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+      });
+
+      $("#fade6").click(function () {
+        $("#div6").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+      });
+    });
+  </script>
 </head>
+
 <body>
-<ul class="auto-grid" style="list-style-type:none;">
-  <a id="fade1" href="#" onclick="playAudio()"><li id="div1" style="background-image:url('images/phool.png');"></li></a>
-  <a id="fade2" href="#" onclick="playAudio()"><li id="div2" style="background-image:url('images/ananas.png');"></li></a>
-  <a id="fade3" href="#" onclick="playAudio()"><li id="div3" style="background-image:url('images/sanskruti.png');"></li></a>
-  <a id="fade4" href="#" onclick="playAudio()"><li id="div4" style="background-image:url('images/arsa.png');"></li></a>
-  <a id="fade5" href="#" onclick="playAudio()"><li id="div5" style="background-image:url('images/kautuk.png');"></li></a>
-  <a id="fade6" href="#" onclick="playAudio()"><li id="div6" style="background-image:url('images/adhikar.png');"></li></a>
-</ul>
-<audio id="myAudio">
-  <source src="https://nitinnaikwadi1.github.io/learning/audio/bell.mp3" type="audio/mpeg">
-</audio>
+  <ul class="auto-grid" style="list-style-type:none;">
+    <a id="fade1" href="#" onclick="playAudio()">
+      <li id="div1" style="background-image:url('images/phool.png');"></li>
+    </a>
+    <a id="fade2" href="#" onclick="playAudio()">
+      <li id="div2" style="background-image:url('images/ananas.png');"></li>
+    </a>
+    <a id="fade3" href="#" onclick="playAudio()">
+      <li id="div3" style="background-image:url('images/sanskruti.png');"></li>
+    </a>
+    <a id="fade4" href="#" onclick="playAudio()">
+      <li id="div4" style="background-image:url('images/arsa.png');"></li>
+    </a>
+    <a id="fade5" href="#" onclick="playAudio()">
+      <li id="div5" style="background-image:url('images/kautuk.png');"></li>
+    </a>
+    <a id="fade6" href="#" onclick="playAudio()">
+      <li id="div6" style="background-image:url('images/adhikar.png');"></li>
+    </a>
+  </ul>
+  <audio id="myAudio">
+    <source src="https://nitinnaikwadi1.github.io/learning/audio/bell.mp3" type="audio/mpeg">
+  </audio>
 
 
-<script>
-var x = document.getElementById("myAudio"); 
+  <script>
+    var x = document.getElementById("myAudio");
 
-function playAudio() { 
-  x.play(); 
-} 
+    function playAudio() {
+      x.play();
+    }
 
-</script>
+  </script>
 
 </body>
+
 </html>
