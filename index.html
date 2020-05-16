@@ -45,9 +45,18 @@ padding: 0;
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+var foo = document.createElement('audio');
+foo.autoplay = false;
+foo.src = 'https://notificationsounds.com/christmas-ringtones/another-hand-bell-309/download/mp3';
+
 $(document).ready(function(){
   $("#fade1").click(function(){
-    $("#div1").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+  
+//foo.src = 'https://nitinnaikwadi1.github.io/learning//audio/bell.mp3';
+
+    $("#div1").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150
+    var audio = document.getElementById("audio");
+        audio.play();
   });
   
   $("#fade2").click(function(){
@@ -67,6 +76,7 @@ $(document).ready(function(){
 
 </head>
 <body>
+<audio id="audio" src="https://notificationsounds.com/christmas-ringtones/another-hand-bell-309/download/mp3"></audio>
 
   <ul class="auto-grid" style="list-style-type:none;">
   <a id="fade1" href="#"><li id="div1" style="background-image:url('https://nitinnaikwadi1.github.io/learning/images/phool.png');"></li></a>
