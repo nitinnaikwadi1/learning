@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/*
+  AUTO GRID
+  Set the minimum item size with `--auto-grid-min-size` and you'll
+  get a fully responsive grid with no media queries.
+*/
+.auto-grid {
+  --auto-grid-min-size: 16rem;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+}
 
+
+/* Presentational styles */
+
+body {
+  background: #efefef;
+  padding: 1rem;
+  line-height: 1.4;
+  font-family: sans-serif;
+}
+
+li {
+  padding: 3rem 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color:#aaa;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+ul {
+margin: 0;
+padding: 0;
+}
+  
+</style>
+
+<script>
+$(document).ready(function(){
+ $("#fade1").click(function(){
+    $("#div1").fadeOut(150).fadeIn(150).fadeOut(150).fadeIn(150);
+  });
+  });
+</script>
+</head>
+<body>
+<ul class="auto-grid" style="list-style-type:none;">
+  <a id="fade1" href="#" onclick="playAudio()"><li id="div1" style="background-image:url('https://nitinnaikwadi1.github.io/learning/images/phool.png');"></li></a>
+  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://www.w3schools.com/cssref/mountain.jpg');"></li></a>
+  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://www.w3schools.com/cssref/mountain.jpg');"></li></a>
+  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://www.w3schools.com/cssref/mountain.jpg');"></li></a>
+  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://www.w3schools.com/cssref/mountain.jpg');"></li></a>
+  <a id="fade1" href="#"><li id="div1" style="background-image:url('https://www.w3schools.com/cssref/mountain.jpg');"></li></a>
+</ul>
 <audio id="myAudio">
-  <source src="https://notificationsounds.com/message-tones/chime-351/download/mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
+  <source src="https://nitinnaikwadi1.github.io/learning/audio/bell.mp3" type="audio/mpeg">
 </audio>
 
-<p>Click the buttons to play or pause the audio.</p>
-
-<button onclick="playAudio()" type="button">Play Audio</button>
 
 <script>
 var x = document.getElementById("myAudio"); 
