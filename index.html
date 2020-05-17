@@ -13,7 +13,7 @@
 <body>
   <div id="app">
     <ul class="auto-grid" style="list-style-type:none;">
-      <div v-for="(card,index) in cardsData" @click.prevent="playSelectedWord(index,card.audio)">
+      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
         <li :id='"div"+index'>{{card.text}}</li>
       </div>
     </ul>
@@ -25,18 +25,19 @@
   var app = new Vue({
     el: '#app',
     data: {
-      cardsData: [
-        { text: 'कौतुक', audio: 'bell' },
-        { text: 'कौतुक', audio: 'bell' },
-        { text: 'कौतुक', audio: 'bell' }],
+      dataFeed:[],
       animDelay: 150,
       audioURLPrefix: "https://nitinnaikwadi1.github.io/learning/audio/"
     },
     mounted: function () {
+      fetch('https://cors.io/?github.com/nitinnaikwadi1/learning/data/shabd.json')
+          .then(response => response.json())
+          .then(data => {
+            this.dataFeed = data.dataFeed;
+          });
     },
-    created: function () { },
-    computed: {
-    },
+    created: function () {},
+    computed: {},
     methods: {
       playSelectedWord(whichIndex, whichMedia) {
         this.addFadeBehaviour(whichIndex);
@@ -44,7 +45,6 @@
           src: [this.audioURLPrefix + whichMedia + ".mp3"]
         });
         sound.play();
-        this.getJsonFile();
       },
       getCardStyle(whichCard) {
         const backStyle = "background-image:url('" + this.cardsArr[whichCard] + "');";
@@ -54,13 +54,6 @@
         $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
           fadeOut(this.animDelay).fadeIn(this.animDelay);
       },
-      getJsonFile() {
-        fetch('data/shabd.json')
-  .then(response => response.json())
-  .then(data => alert(data));
-        
-        
-      }
     },
   })
 </script>
