@@ -31,20 +31,9 @@
       feedURLPrefix:  "data/"
     },
     mounted: function () {
-      fetch(this.feedURLPrefix+'shabd.json')
+      fetch('https://github.com/nitinnaikwadi1/learning/blob/master/data/shabd.json')
         .then(data => {
-          this.dataFeed = [{
-            "text": "कौतुक",
-            "audio": "bell"
-        },
-        {
-            "text": "कौतुक",
-            "audio": "bell"
-        },
-        {
-            "text": "कौतुक",
-            "audio": "bell"
-        }];
+          this.dataFeed = data.dataFeed;
           alert(JSON.stringify(data));
         })
     },
