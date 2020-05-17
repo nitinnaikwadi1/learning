@@ -31,7 +31,7 @@
       feedURLPrefix:  "data/"
     },
     mounted: function () {
-      fetch(this.feedURLPrefix+'shabd.json')
+      fetch('data/shabd.json')
         .then(data => {
           this.dataFeed = data.dataFeed;
         })
