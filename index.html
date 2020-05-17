@@ -35,7 +35,7 @@
         .then(response => response.text())
         .then(data => {
           this.dataFeed = data.dataFeed;
-          alert(JSON.stringify(data));
+          alert(JSON.stringify(data.dataFeed));
         })
     },
     created: function () {},
