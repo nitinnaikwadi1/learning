@@ -4,93 +4,66 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.3/howler.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
-
-  <!-- styling the cards -->
-  <style>
-    .auto-grid {
-      --auto-grid-min-size: 16rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-      grid-gap: 1rem;
-    }
-
-    body {
-      background: #efefef;
-      padding: 1rem;
-      font-family: sans-serif;
-    }
-
-    li {
-      padding: 3rem 1rem;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-  <!-- styling the cards -->
-
-  <!-- events such as fade when cards is clicked -->
-  <!-- events such as fade when cards is clicked -->
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
   <div id="app">
     <ul class="auto-grid" style="list-style-type:none;">
-      <div v-for="(card,index) in cardsArr" @click.prevent="playSelectedWord(index)">
-        <a :id='"fade"+index' href="#" >
-          <li :id='"div"+index' :style='getCardStyle(index)' />
-        </a>
+      <div v-for="(card,index) in cardsData" @click.prevent="playSelectedWord(index,card.audio)">
+        <li :id='"div"+index'>{{card.text}}</li>
       </div>
     </ul>
   </div>
 </body>
 
+<!-- events such as fade and play audio when cards is clicked -->
 <script>
   var app = new Vue({
     el: '#app',
     data: {
-      audioURLPrefix: "https://nitinnaikwadi1.github.io/learning/audio/",
+      cardsData: [
+        { text: 'कौतुक', audio: 'bell' },
+        { text: 'कौतुक', audio: 'bell' },
+        { text: 'कौतुक', audio: 'bell' }],
       animDelay: 150,
-      audioArr: ['bell.mp3','bell.mp3','bell.mp3','bell.mp3','bell.mp3','bell.mp3'],
-      cardsArr:['images/phool.png','images/sanskruti.png', 'images/arsa.png',
-        'images/kautuk.png', 'images/adhikar.png', 'images/adhikar.png'],
-      cardsArr1: [
-          {image :'images/phool.png', audio: 'bell.mp3'},
-           'कौतुक',
-        'images/sanskruti.png', 'images/arsa.png',
-        'images/kautuk.png', 'images/adhikar.png'],
-      orders: []
+      audioURLPrefix: "https://nitinnaikwadi1.github.io/learning/audio/"
     },
-    mounted: function () { },
+    mounted: function () {
+    },
     created: function () { },
-    computed: {},
-
+    computed: {
+    },
     methods: {
-      playSelectedWord(whichIndex) {
-        this.addFadeBehaviour(whichIndex);  
+      playSelectedWord(whichIndex, whichMedia) {
+        this.addFadeBehaviour(whichIndex);
         var sound = new Howl({
-          src: [this.audioURLPrefix + this.audioArr[whichIndex]]
+          src: [this.audioURLPrefix + whichMedia + ".mp3"]
         });
         sound.play();
+        this.getJsonFile();
       },
       getCardStyle(whichCard) {
         const backStyle = "background-image:url('" + this.cardsArr[whichCard] + "');";
         return backStyle;
       },
       addFadeBehaviour(whichIndex) {
-        $("#div"+whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
+        $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
           fadeOut(this.animDelay).fadeIn(this.animDelay);
+      },
+      getJsonFile() {
+        fetch('data/shabd.json')
+  .then(response => response.json())
+  .then(data => alert(data));
+        
+        
       }
     },
   })
 </script>
+<!-- events such as fade and play audio when cards is clicked -->
 
 </html>
