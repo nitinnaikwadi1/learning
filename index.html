@@ -27,10 +27,10 @@
     data: {
       dataFeed:[],
       animDelay: 150,
-      audioURLPrefix: "https://nitinnaikwadi1.github.io/learning/audio/"
+      audioURLPrefix: "audio/"
     },
     mounted: function () {
-      fetch('https://github.com/nitinnaikwadi1/learning/data/shabd.json')
+      fetch('data/shabd.json')
           .then(response => response.json())
           .then(data => {
             this.dataFeed = data.dataFeed;
