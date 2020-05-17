@@ -33,7 +33,18 @@
     mounted: function () {
       fetch(this.feedURLPrefix+'shabd.json')
         .then(data => {
-          this.dataFeed = data.dataFeed;
+          this.dataFeed = [{
+            "text": "कौतुक",
+            "audio": "bell"
+        },
+        {
+            "text": "कौतुक",
+            "audio": "bell"
+        },
+        {
+            "text": "कौतुक",
+            "audio": "bell"
+        }];
           alert(JSON.stringify(data));
         })
     },
