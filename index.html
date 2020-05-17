@@ -34,9 +34,10 @@
       fetch(this.feedURLPrefix+'shabd.json')
         .then(data => {
           this.dataFeed = data.dataFeed;
+          alert(JSON.stringify(data.dataFeed));
         })
     },
-    created: function () { },
+    created: function () {},
     computed: {},
     methods: {
       playSelectedWord(whichIndex, whichMedia) {
