@@ -30,7 +30,7 @@
       audioURLPrefix: "https://nitinnaikwadi1.github.io/learning/audio/"
     },
     mounted: function () {
-      fetch('data/shabd.json')
+      fetch('https://cors.io/?github.com/nitinnaikwadi1/learning/data/shabd.json')
           .then(response => response.json())
           .then(data => {
             this.dataFeed = data.dataFeed;
