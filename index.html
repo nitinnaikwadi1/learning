@@ -27,10 +27,11 @@
     data: {
       dataFeed: [],
       animDelay: 150,
-      audioURLPrefix: "audio/"
+      audioURLPrefix: "audio/",
+      feedURLPrefix:  "data/"
     },
     mounted: function () {
-      fetch('data/shabd.json')
+      fetch(this.feedURLPrefix+'shabd.json')
         .then(data => {
           this.dataFeed = data.dataFeed;
         })
