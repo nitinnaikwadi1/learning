@@ -57,7 +57,7 @@
       getJsonFile() {
         fetch('data/shabd.json')
   .then(response => response.json())
-  .then(data => alert(data));
+  .then(data => alert(JSON.stringify(data)));
         
         
       }
