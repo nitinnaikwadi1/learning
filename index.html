@@ -31,10 +31,10 @@
       feedURLPrefix:  "data/"
     },
     mounted: function () {
-      fetch('data/shabd.json')
+      fetch(this.feedURLPrefix+'shabd.json')
         .then(data => {
           this.dataFeed = data.dataFeed;
-          alert(JSON.stringify(data.dataFeed));
+          alert(JSON.stringify(data));
         })
     },
     created: function () {},
