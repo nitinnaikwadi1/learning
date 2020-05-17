@@ -25,18 +25,20 @@
   var app = new Vue({
     el: '#app',
     data: {
-      dataFeed:[],
+      dataFeed: [
+            { text: 'कौतुक', audio: 'bell' },
+            { text: 'कौतुक', audio: 'bell' },
+            { text: 'कौतुक', audio: 'bell' }],
       animDelay: 150,
       audioURLPrefix: "audio/"
     },
     mounted: function () {
       fetch('data/shabd.json')
-          .then(response => response.json())
-          .then(data => {
-            this.dataFeed = data.dataFeed;
-          });
+        .then(data => {
+          this.dataFeed = data.dataFeed;
+        })
     },
-    created: function () {},
+    created: function () { },
     computed: {},
     methods: {
       playSelectedWord(whichIndex, whichMedia) {
@@ -45,10 +47,6 @@
           src: [this.audioURLPrefix + whichMedia + ".mp3"]
         });
         sound.play();
-      },
-      getCardStyle(whichCard) {
-        const backStyle = "background-image:url('" + this.cardsArr[whichCard] + "');";
-        return backStyle;
       },
       addFadeBehaviour(whichIndex) {
         $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
