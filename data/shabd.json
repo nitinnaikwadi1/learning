@@ -5,11 +5,31 @@
             "audio": "bell"
         },
         {
-            "text": "कौतुक",
+            "text": "कसरत",
             "audio": "bell"
         },
         {
-            "text": "कौतुक",
+            "text": "बाजार",
+            "audio": "bell"
+        },
+        {
+            "text": "रिमझिम",
+            "audio": "bell"
+        },
+        {
+            "text": "भरजरी",
+            "audio": "bell"
+        },
+        {
+            "text": "सुरुवात",
+            "audio": "bell"
+        },
+        {
+            "text": "फुलबाग",
+            "audio": "bell"
+        },
+        {
+            "text": "शेतकरी",
             "audio": "bell"
         }
     ]
