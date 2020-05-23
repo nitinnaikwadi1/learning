@@ -19,9 +19,8 @@
     background-color: #1f889d;
     font-family: genericUnicode;
     color: #fff;
-    text-align: start;
-    font-weight: bolder;
-    font-size: x-large;
+    text-align: center;
+    font-size: calc(4vw + 4vh + 2vmin);
     text-decoration: none;
   }
 
