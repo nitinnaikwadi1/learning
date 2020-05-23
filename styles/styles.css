@@ -1,37 +1,53 @@
-
 /*
     styling the cards
 */
+
 .auto-grid {
-    --auto-grid-min-size: 10rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-    grid-gap: 1rem;
-  }
+  --auto-grid-min-size: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+}
 
-  body {
-    background: #efefef;
-    padding: 0.1rem;
-  }
+body {
+  background: #efefef;
+  padding: 0.1rem;
+}
 
-  li {
-    padding: 1rem;
-    background-color: #1f889d;
-    font-family: genericUnicode;
-    color: #fff;
-    text-align: center;
-    font-size: calc(4vw + 4vh + 2vmin);
-    text-decoration: none;
-  }
+li {
+  padding: 1rem;
+  background-color: #1f889d;
+  font-family: genericUnicode;
+  color: #fff;
+  text-align: center;
+  font-size: calc(4vw + 4vh + 2vmin);
+  text-decoration: none;
+}
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style:none;
-    list-style-type:none;
-  }
-  
-  @font-face {
-    font-family: genericUnicode;
-    src: url('./../fonts/eczar.ttf');
-  }
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: genericUnicode;
+  src: url('./../fonts/eczar.ttf');
+}
+
+.disableTextSelection {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome and Opera */
+}
