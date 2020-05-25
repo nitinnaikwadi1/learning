@@ -13,7 +13,7 @@
   --auto-grid-min-size: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 0.150rem;
+  grid-gap: 0.1rem;
 }
 
 .auto-grid-barakhadi {
@@ -24,8 +24,7 @@
 }
 
 body {
-  background: #efefef;
-  padding: 0.1rem;
+  background: #f2f2f2;
 }
 
 li {
@@ -39,7 +38,7 @@ li {
 }
 
 li.mulakshar {
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #C3526F;
   font-family: genericUnicode;
   color: #fff;
@@ -49,7 +48,7 @@ li.mulakshar {
 }
 
 li.ank{
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #43929A;
   font-family: genericUnicode;
   color: #fff;
