@@ -13,14 +13,14 @@
   --auto-grid-min-size: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 0.125rem;
+  grid-gap: 0.150rem;
 }
 
 .auto-grid-barakhadi {
-  --auto-grid-min-size: 4rem;
+  --auto-grid-min-size: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 0.125rem;
+  grid-gap: 0.150rem;
 }
 
 body {
@@ -40,7 +40,7 @@ li {
 
 li.mulakshar {
   padding: 1rem;
-  background-color: #3AAFA9;
+  background-color: #C3526F;
   font-family: genericUnicode;
   color: #fff;
   text-align: center;
