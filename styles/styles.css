@@ -20,7 +20,7 @@
   --auto-grid-min-size: 4rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 1rem;
+  grid-gap: 0.125rem;
 }
 
 body {
