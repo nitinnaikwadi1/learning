@@ -9,6 +9,20 @@
   grid-gap: 1rem;
 }
 
+.auto-grid-ank {
+  --auto-grid-min-size: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 0.5rem;
+}
+
+.auto-grid-barakhadi {
+  --auto-grid-min-size: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+}
+
 body {
   background: #efefef;
   padding: 0.1rem;
@@ -20,9 +34,30 @@ li {
   font-family: genericUnicode;
   color: #fff;
   text-align: center;
-  font-size: calc(4vw + 4vh + 2vmin);
+  font-size: calc(3vw + 3vh + 2vmin);
   text-decoration: none;
 }
+
+li.mulakshar {
+  padding: 1rem;
+  background-color: #1f889d;
+  font-family: genericUnicode;
+  color: #fff;
+  text-align: center;
+  font-size: calc(3vw + 3vh + 2vmin);
+  text-decoration: none;
+}
+
+li.ank{
+  padding: 1rem;
+  background-color: #1f889d;
+  font-family: genericUnicode;
+  color: #fff;
+  text-align: center;
+  font-size: 10vw;
+  text-decoration: none;
+}
+
 
 ul {
   margin: 0;
