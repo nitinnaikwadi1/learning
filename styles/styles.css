@@ -10,14 +10,14 @@
 }
 
 .auto-grid-ank {
-  --auto-grid-min-size: 4rem;
+  --auto-grid-min-size: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.5rem;
 }
 
 .auto-grid-barakhadi {
-  --auto-grid-min-size: 5rem;
+  --auto-grid-min-size: 4rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 1rem;
@@ -54,7 +54,7 @@ li.ank{
   font-family: genericUnicode;
   color: #fff;
   text-align: center;
-  font-size: 10vw;
+  font-size: calc(3vw + 3vh + 2vmin);
   text-decoration: none;
 }
 
