@@ -1,37 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap 4 Three Column Grid Layouts for Tablets (landscape) and Desktops</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<style>
-    
-    .demo-content{
-        padding: 5px;
-        font-size: 18px;
-        background: #dbdfe5;
-        margin-bottom: 5px;
-    }
-    .demo-content.bg-alt{
-        background: #abb1b8;
-    }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/howler.min.js"></script>
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
-	<div class="container mt-3">
-        <!--Row with three equal columns-->
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="demo-content">this is first</div>
-            </div>
-            <div class="col-lg-4">
-                <div class="demo-content bg-alt">this is second</div>
-            </div>
-            <div class="col-lg-4">
-                <div class="demo-content">this is third</div>
-            </div>
-        </div>
-        
+  <div id="app">
+    <ul class="auto-grid">
+      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
+        <li :id='"div"+index' class="disableTextSelection">{{card.text}}</li>
+      </div>
+    </ul>
+  </div>
 </body>
-</html>                            
+
+<!-- events such as fade and play audio when cards is clicked -->
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      dataFeed: [],
+      animDelay: 150,
+      audioURLPrefix: "audio/",
+      feedURLPrefix:  "data/"
+    },
+    mounted: function () {
+      fetch('data/barakhadi.json', {mode: 'no-cors'})
+        .then(response => response.json())
+        .then(data => {
+          this.dataFeed = data.dataFeed;
+        })
+    },
+    created: function () {},
+    computed: {},
+    methods: {
+      playSelectedWord(whichIndex, whichMedia) {
+        this.addFadeBehaviour(whichIndex);
+        var sound = new Howl({
+          src: [this.audioURLPrefix + whichMedia + ".mp3"]
+        });
+        sound.play();
+      },
+      addFadeBehaviour(whichIndex) {
+        $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
+          fadeOut(this.animDelay).fadeIn(this.animDelay);
+      },
+    },
+  })
+</script>
+<!-- events such as fade and play audio when cards is clicked -->
+
+</html>

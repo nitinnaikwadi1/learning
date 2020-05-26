@@ -12,9 +12,9 @@
 
 <body>
   <div id="app">
-    <ul class="auto-grid">
+    <ul class="auto-grid-dashboard">
       <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
-        <li :id='"div"+index' class="disableTextSelection">{{card.text}}</li>
+        <li :id='"div"+index' class="disableTextSelection dashboard">{{card.text}}</li>
       </div>
     </ul>
   </div>
@@ -31,7 +31,7 @@
       feedURLPrefix:  "data/"
     },
     mounted: function () {
-      fetch('data/barakhadi.json', {mode: 'no-cors'})
+      fetch(this.feedURLPrefix+'dashboard.json', {mode: 'no-cors'})
         .then(response => response.json())
         .then(data => {
           this.dataFeed = data.dataFeed;

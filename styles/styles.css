@@ -9,6 +9,13 @@
   grid-gap: 1rem;
 }
 
+.auto-grid-dashboard {
+  --auto-grid-min-size: 15rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 0.5rem;
+}
+
 .auto-grid-ank {
   --auto-grid-min-size: 5rem;
   display: grid;
@@ -34,6 +41,16 @@ li {
   color: #fff;
   text-align: center;
   font-size: calc(3vw + 3vh + 2vmin);
+  text-decoration: none;
+}
+
+li.dashboard {
+  padding: 1rem;
+  background: linear-gradient(45deg, #4099ff, #73b4ff);
+  font-family: genericUnicode;
+  color: #fff;
+  text-align: center;
+  font-size: calc(5vw + 5vh + 5vmin);
   text-decoration: none;
 }
 
@@ -85,3 +102,10 @@ ul {
   /* Non-prefixed version, currently
      supported by Chrome and Opera */
 }
+
+
+
+/*
+  dashboard layout
+*/  
+
