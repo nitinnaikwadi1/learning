@@ -1,37 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap 4 Three Column Grid Layouts for Tablets (landscape) and Desktops</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<style>
-    
-    .demo-content{
-        padding: 5px;
-        font-size: 18px;
-        background: #dbdfe5;
-        margin-bottom: 5px;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/howler.min.js"></script>
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <style>
+    .learning-card {      
+      padding: 0.5rem;
+      background-color: #43929A;
+      font-family: genericUnicode;
+      color: #fff;
+      text-align: center;
+      font-size: calc(3vw + 3vh + 2vmin);
+      text-decoration: none;
+      border-style: solid;
+      border-width: thin;
     }
-    .demo-content.bg-alt{
-        background: #abb1b8;
-    }
-</style>
+  </style>
 </head>
+
 <body>
-	<div class="container mt-3">
-        <!--Row with three equal columns-->
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="demo-content">this is first</div>
-            </div>
-            <div class="col-lg-4">
-                <div class="demo-content bg-alt">this is second</div>
-            </div>
-            <div class="col-lg-4">
-                <div class="demo-content">this is third</div>
-            </div>
-        </div>
-        
+  <div id="app" class="container">
+    <div class="row">
+      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)" class="col col-4 col-sm-3 col-md-2 col-lg-1 learning-card">
+        <span :id='"div"+index' class="disableTextSelection">{{card.text}}</span>
+      </div>
+    </ul>
+  </div>
 </body>
-</html>                            
+
+<!-- events such as fade and play audio when cards is clicked -->
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      dataFeed: [],
+      animDelay: 150,
+      audioURLPrefix: "audio/ank/",
+      feedURLPrefix:  "data/"
+    },
+    mounted: function () {
+      fetch('data/ank.json', {mode: 'no-cors'})
+        .then(response => response.json())
+        .then(data => {
+          this.dataFeed = data.dataFeed;
+        })
+    },
+    created: function () {},
+    computed: {},
+    methods: {
+      playSelectedWord(whichIndex, whichMedia) {
+        this.addFadeBehaviour(whichIndex);
+        var sound = new Howl({
+          src: [this.audioURLPrefix + whichMedia + ".mp3"]
+        });
+        sound.play();
+      },
+      addFadeBehaviour(whichIndex) {
+        $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
+          fadeOut(this.animDelay).fadeIn(this.animDelay);
+      },
+    },
+  })
+</script>
+<!-- events such as fade and play audio when cards is clicked -->
+
+</html>
