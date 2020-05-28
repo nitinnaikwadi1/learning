@@ -13,7 +13,7 @@
   --auto-grid-min-size: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 0.1rem;
+  grid-gap: 0.5rem;
 }
 
 .auto-grid-barakhadi {
@@ -24,7 +24,7 @@
 }
 
 body {
-  background: #f2f2f2;
+  background: #ffffff;
 }
 
 li {
@@ -55,6 +55,16 @@ li.ank{
   text-align: center;
   font-size: calc(3vw + 3vh + 2vmin);
   text-decoration: none;
+  border: none;
+  border-radius: 1px;
+  position: relative;
+  box-shadow: 3px 0px 3px 0px rgba(0,0,0,.1);
+  border-left: 4px solid #43929A;  
+  text-shadow: 1.7px 1.7px 1.7px rgba(0,0,0,.7);
+  }
+
+@keyframes fadeEffect{
+  50% {background:  #f6f6f6};
 }
 
 
@@ -85,3 +95,43 @@ ul {
   /* Non-prefixed version, currently
      supported by Chrome and Opera */
 }
+
+/*==================================================
+ * Effect 5
+ * ===============================================*/
+ .effect5
+ {
+   position: relative;
+ }
+ .effect5:before, .effect5:after
+ {
+   z-index: -1;
+   position: absolute;
+   content: "";
+   bottom: 25px;
+   left: 10px;
+   width: 50%;
+   top: 80%;
+   max-width:300px;
+   background: #777;
+   -webkit-box-shadow: 0 35px 20px #777;
+   -moz-box-shadow: 0 35px 20px #777;
+   box-shadow: 0 35px 20px #777;
+   -webkit-transform: rotate(-8deg);
+   -moz-transform: rotate(-8deg);
+   -o-transform: rotate(-8deg);
+   -ms-transform: rotate(-8deg);
+   transform: rotate(-8deg);
+ }
+ .effect5:after
+ {
+   -webkit-transform: rotate(8deg);
+   -moz-transform: rotate(8deg);
+   -o-transform: rotate(8deg);
+   -ms-transform: rotate(8deg);
+   transform: rotate(8deg);
+   right: 10px;
+   left: auto;
+ }
+ 
+ 

@@ -1,0 +1,24 @@
+{
+    "dataFeed": [
+        {
+            "text": "अ आ इ",
+            "audio": "bell"
+        },
+        {
+            "text": "१ ते १००",
+            "audio": "bell"
+        },
+        {
+            "text": "A B C D",
+            "audio": "bell"
+        },
+        {
+            "text": "मराठी अंक",
+            "audio": "bell"
+        },
+        {
+            "text": "बाराखडी",
+            "audio": "bell"
+        }
+    ]
+}

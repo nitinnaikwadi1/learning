@@ -34,7 +34,6 @@
       <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)" class="col col-4 col-sm-3 col-md-2 col-lg-1 learning-card">
         <span :id='"div"+index' class="disableTextSelection">{{card.text}}</span>
       </div>
-    </ul>
   </div>
 </body>
 
