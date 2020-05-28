@@ -12,7 +12,7 @@
 
 <body class="flexgrid">
   <div id="app" class="container">
-      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)" class="thing" onclick="location.href='/ank.html';">
+      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)" class="thing" onclick="location.href='ank.html';">
         <span :id='"div"+index' class="disableTextSelection">{{card.text}}</span>
       </div>
   </div>
