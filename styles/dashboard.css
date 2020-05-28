@@ -130,8 +130,8 @@
   margin-bottom: 1rem;
   cursor: pointer;
   box-shadow: 0 2.5px 5px rgba(25, 25, 25, 0.1);
-  background: #1dd2af;
-  background: linear-gradient(to bottom, #1dd2af, #17a689);
+  background: #fed26a;
+  background: linear-gradient(to bottom, #fed26a, #fec238);
 }
 .flexgrid .thing:hover {
   animation-name: shake;
@@ -139,8 +139,9 @@
   animation-iteration-count: infinite;
 }
 .flexgrid .thing:nth-child(1), .flexgrid .thing:nth-child(4), .flexgrid .thing:nth-child(7), .flexgrid .thing:nth-child(10) {
-  background: #fed26a;
-  background: linear-gradient(to bottom, #fed26a, #fec238);
+  background: #1dd2af;
+  background: linear-gradient(to bottom, #1dd2af, #17a689);
+  
 }
 .flexgrid .thing:nth-child(1):hover, .flexgrid .thing:nth-child(4):hover, .flexgrid .thing:nth-child(7):hover, .flexgrid .thing:nth-child(10):hover {
   animation-name: bounce;

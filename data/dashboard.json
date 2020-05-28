@@ -2,23 +2,28 @@
     "dataFeed": [
         {
             "text": "अ आ इ",
-            "audio": "bell"
+            "audio": "bell",
+            "link" : "barakhadi.html"
         },
         {
             "text": "१ ते १००",
-            "audio": "bell"
+            "audio": "bell",
+            "link" : "1to100.html"
         },
         {
             "text": "A B C D",
-            "audio": "bell"
+            "audio": "bell",
+            "link" : "abcd.html"
         },
         {
             "text": "मराठी अंक",
-            "audio": "bell"
+            "audio": "bell",
+            "link" : "ank.html"
         },
         {
             "text": "बाराखडी",
-            "audio": "bell"
+            "audio": "bell",
+            "link" : "barakhadi.html"
         }
     ]
 }

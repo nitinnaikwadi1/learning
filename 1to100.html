@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 
-
-<head><meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="js/jquery.min.js"></script>
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
-  <link rel="stylesheet" href="styles/dashboard.css">
-  
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body class="flexgrid">
-  <div id="app" class="container">
-      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)" class="thing" :onclick="'location.href='+card.link+';'">
-        <span :id='"div"+index' class="disableTextSelection">{{card.text}}</span>
+<body>
+  <div id="app">
+    <ul class="auto-grid-ek-100">
+      <div class="effect5" v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
+        <li :id='"div"+index' class="disableTextSelection ek-100">{{card.text}}</li>
       </div>
+    </ul>
   </div>
-  
 </body>
 
 <!-- events such as fade and play audio when cards is clicked -->
@@ -26,11 +27,11 @@
     data: {
       dataFeed: [],
       animDelay: 150,
-      audioURLPrefix: "audio/",
+      audioURLPrefix: "audio/ank/",
       feedURLPrefix:  "data/"
     },
     mounted: function () {
-      fetch('data/dashboard.json', {mode: 'no-cors'})
+      fetch('data/1to100.json', {mode: 'no-cors'})
         .then(response => response.json())
         .then(data => {
           this.dataFeed = data.dataFeed;
