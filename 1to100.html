@@ -14,7 +14,7 @@
 <body>
   <div id="app">
     <ul class="auto-grid-ek-100 container">
-      <div class="effect5" v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
+      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
         <li :id='"div"+index' class="disableTextSelection ek-100">{{card.text}}</li>
       </div>
     </ul>
