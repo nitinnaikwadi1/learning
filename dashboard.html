@@ -2,21 +2,22 @@
 <html>
 
 
-<head><meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="js/jquery.min.js"></script>
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
   <link rel="stylesheet" href="styles/dashboard.css">
-  
+
 </head>
 
 <body class="flexgrid">
   <div id="app" class="container">
-      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)" class="thing" :onclick="'location.href='+card.link+';'">
-        <span :id='"div"+index' class="disableTextSelection">{{card.text}}</span>
-      </div>
+    <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card)" class="thing">
+      <span :id='"div"+index' class="disableTextSelection">{{card.text}}</span>
+    </div>
   </div>
-  
+
 </body>
 
 <!-- events such as fade and play audio when cards is clicked -->
@@ -27,24 +28,29 @@
       dataFeed: [],
       animDelay: 150,
       audioURLPrefix: "audio/",
-      feedURLPrefix:  "data/"
+      feedURLPrefix: "data/"
     },
     mounted: function () {
-      fetch('data/dashboard.json', {mode: 'no-cors'})
+      fetch('data/dashboard.json', { mode: 'no-cors' })
         .then(response => response.json())
         .then(data => {
           this.dataFeed = data.dataFeed;
         })
     },
-    created: function () {},
+    created: function () { },
     computed: {},
     methods: {
-      playSelectedWord(whichIndex, whichMedia) {
+      playSelectedWord(whichIndex, whichCard) {
         this.addFadeBehaviour(whichIndex);
         var sound = new Howl({
-          src: [this.audioURLPrefix + whichMedia + ".mp3"]
+          src: [this.audioURLPrefix + whichCard.audio + ".mp3"]
         });
         sound.play();
+
+        sound.on('end', function () {
+          //navigate to selected page
+        window.location.href = whichCard.link;
+        });
       },
       addFadeBehaviour(whichIndex) {
         $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
