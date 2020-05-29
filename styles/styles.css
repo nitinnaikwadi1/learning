@@ -17,7 +17,7 @@
 }
 
 .container{
-  margin-bottom: 52px;
+  margin-bottom: 72px;
 }
 
 .auto-grid-abcd {
@@ -196,7 +196,7 @@ ul {
   position: fixed;
   bottom: 0;
   margin-left: -2px;
-  height: 50px;
+  height: 70px;
   width: 100%;
   color:#000;
   background-color: #FFF;
@@ -205,7 +205,7 @@ ul {
 
 .back-button{
   margin-top: 5px;
-  font-size:40px; 
+  font-size:50px; 
   color:#961a42;
   display: flex;
   justify-content: center;
