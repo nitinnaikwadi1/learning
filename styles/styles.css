@@ -16,10 +16,6 @@
   grid-gap: 0.5rem;
 }
 
-.container{
-  margin-bottom: 72px;
-}
-
 .auto-grid-abcd {
   --auto-grid-min-size: 7rem;
   display: grid;
@@ -192,6 +188,10 @@ ul {
    left: auto;
  }
  
+.container{
+  margin-bottom: 72px;
+}
+
  .footer {
   position: fixed;
   bottom: 0;

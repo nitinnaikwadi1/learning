@@ -13,7 +13,7 @@
 
 <body>
   <div id="app">
-    <ul class="auto-grid-ank">
+    <ul class="auto-grid-ank container">
       <div class="effect5" v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
         <li :id='"div"+index' class="disableTextSelection ank">{{card.text}}</li>
       </div>

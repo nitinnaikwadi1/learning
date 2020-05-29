@@ -13,7 +13,7 @@
 
 <body>
   <div id="app">
-    <ul class="auto-grid-abcd">
+    <ul class="auto-grid-abcd container">
       <div class="effect5" v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
         <li :id='"div"+index' class="disableTextSelection abcd">{{card.text}}</li>
       </div>
