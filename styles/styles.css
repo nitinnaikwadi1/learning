@@ -42,16 +42,6 @@ body {
   margin: 2px;
 }
 
-li {
-  padding: 1rem;
-  background-color: #1f889d;
-  font-family: genericUnicode;
-  color: #fff;
-  text-align: center;
-  font-size: calc(3vw + 3vh + 2vmin);
-  text-decoration: none;
-}
-
 li.mulakshar {
   padding: 0.5rem;
   background-color: #029191;
