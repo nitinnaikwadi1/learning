@@ -8,6 +8,7 @@
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body>
@@ -17,6 +18,11 @@
         <li :id='"div"+index' class="disableTextSelection abcd">{{card.text}}</li>
       </div>
     </ul>
+    <footer class="footer">
+      <div class="center-div" onclick="location.href='dashboard.html';">
+        <i class="fas fa-chevron-circle-left back-button" style="color:#e67e22;"></i>
+      </div>
+    </footer>
   </div>
 </body>
 

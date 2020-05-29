@@ -204,9 +204,8 @@ ul {
 }
 
 .back-button{
-  margin-top: 5px;
-  font-size:50px; 
-  color:#961a42;
+  margin-top: 12px;
+  font-size:40px; 
   display: flex;
   justify-content: center;
 }
