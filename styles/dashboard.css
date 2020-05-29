@@ -146,7 +146,7 @@
   animation-name: bounce;
 }
 .flexgrid .thing:nth-child(2), .flexgrid .thing:nth-child(7) {
-  background:  #801638
+  background:  #801638;
 }
 .flexgrid .thing:nth-child(2):hover, .flexgrid .thing:nth-child(5):hover, .flexgrid .thing:nth-child(9):hover, .flexgrid .thing:nth-child(14):hover {
   animation-name: swing;
