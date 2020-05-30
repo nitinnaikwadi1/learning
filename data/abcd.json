@@ -2,107 +2,107 @@
     "dataFeed": [
         {
             "text": "A",
-            "audio": "1"
+            "audio": "a"
         },
         {
             "text": "B",
-            "audio": "2"
+            "audio": "b"
         },
         {
             "text": "C",
-            "audio": "3"
+            "audio": "c"
         },
         {
             "text": "D",
-            "audio": "4"
+            "audio": "d"
         },
         {
             "text": "E",
-            "audio": "5"
+            "audio": "e"
         },
         {
             "text": "F",
-            "audio": "6"
+            "audio": "f"
         },
         {
             "text": "G",
-            "audio": "7"
+            "audio": "g"
         },
         {
             "text": "H",
-            "audio": "8"
+            "audio": "h"
         },
         {
             "text": "I",
-            "audio": "9"
+            "audio": "i"
         },
         {
             "text": "J",
-            "audio": "10"
+            "audio": "j"
         },
         {
             "text": "K",
-            "audio": "10"
+            "audio": "k"
         },
         {
             "text": "L",
-            "audio": "10"
+            "audio": "l"
         },
         {
             "text": "M",
-            "audio": "10"
+            "audio": "m"
         },
         {
             "text": "N",
-            "audio": "10"
+            "audio": "n"
         },
         {
             "text": "O",
-            "audio": "10"
+            "audio": "o"
         },
         {
             "text": "P",
-            "audio": "10"
+            "audio": "p"
         },
         {
             "text": "Q",
-            "audio": "10"
+            "audio": "q"
         },
         {
             "text": "R",
-            "audio": "10"
+            "audio": "r"
         },
         {
             "text": "S",
-            "audio": "10"
+            "audio": "s"
         },
         {
             "text": "T",
-            "audio": "10"
+            "audio": "t"
         },
         {
             "text": "U",
-            "audio": "10"
+            "audio": "u"
         },
         {
             "text": "V",
-            "audio": "10"
+            "audio": "v"
         },
         {
             "text": "W",
-            "audio": "10"
+            "audio": "w"
         },
         {
             "text": "X",
-            "audio": "10"
+            "audio": "x"
         },
         {
             "text": "Y",
-            "audio": "10"
+            "audio": "y"
         },
         {
             "text": "Z",
-            "audio": "10"
+            "audio": "z"
         }
     ]
 }
