@@ -6,10 +6,6 @@
 * @param $margin  —  Margin with unit
 */
 
-.container{
-  display: inline-block;
-  vertical-align: middle;
-}
 
 @media screen and (min-width: 600px) and (max-width: 799px) {
   .flexgrid .container {
@@ -101,11 +97,6 @@
   overflow-x: hidden;
   width: 100%;
 }
-.body {
-  display:flex; flex-direction:column; justify-content:center;
-  min-height:100vh;
-}
-
 .flexgrid *, .flexgrid *:before, .flexgrid *:after {
   box-sizing: border-box;
 }
