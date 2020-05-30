@@ -28,6 +28,7 @@
 
 <!-- events such as fade and play audio when cards is clicked -->
 <script>
+  var sound = null;
   var app = new Vue({
     el: '#app',
     data: {
@@ -48,7 +49,12 @@
     methods: {
       playSelectedWord(whichIndex, whichMedia) {
         this.addFadeBehaviour(whichIndex);
-        var sound = new Howl({
+        if (sound != null) {
+        sound.stop();
+        sound.unload();
+        sound = null;
+    }
+        sound = new Howl({
           src: [this.audioURLPrefix + whichMedia + ".mp3"]
         });
         sound.play();
