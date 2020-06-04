@@ -1,9 +1,10 @@
 const staticCacheName = 'site-static-v1';
 const assets = [
   '/',
-  'dashboard.html',
-  'js/ui.js',
-  '/assets/images/'
+  '/dashboard.html',//default
+  '/dashboard.html?homescreen=1', //default
+  '/?homescreen=1', //default
+  '/assets/images/*'
 ];
 // install event
 self.addEventListener('install', evt => {
