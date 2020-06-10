@@ -1,6 +1,11 @@
 {
     "dataFeed": [
         {
+            "text": "अक्षर",
+            "audio": "bell",
+            "link" : "mulakshar.html"
+        },
+        {
             "text": "अ आ इ",
             "audio": "bell",
             "link" : "barakhadi.html"
