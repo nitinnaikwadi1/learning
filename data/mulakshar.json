@@ -1,1 +1,47 @@
-
+{
+    "dataFeed1": [
+        {
+            "text": "मा",
+            "audio": "1-a"
+        },
+        {
+            "text": "खू",
+            "audio": "3-e"
+        },
+        {
+            "text": "त्र",
+            "audio": "4-ie"
+        },
+        {
+            "text": "प",
+            "audio": "4-ie"
+        },
+        {
+            "text": "रे",
+            "audio": "2-aa"
+        },{
+            "text": "सा",
+            "audio": "1-a"
+        },
+        {
+            "text": "हे",
+            "audio": "3-e"
+        },
+        {
+            "text": "आ",
+            "audio": "2-aa"
+        },
+        {
+            "text": "त",
+            "audio": "4-ie"
+        },
+        {
+            "text": "झे",
+            "audio": "2-aa"
+        },
+        {
+            "text": "मि",
+            "audio": "3-e"
+        }
+    ]
+}
