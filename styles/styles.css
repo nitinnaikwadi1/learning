@@ -10,14 +10,14 @@
 }
 
 .auto-grid-ek-100 {
-  --auto-grid-min-size: 5rem;
+  --auto-grid-min-size: 8rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.5rem;
 }
 
 .auto-grid-abcd {
-  --auto-grid-min-size: 7rem;
+  --auto-grid-min-size: 8rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.5rem;
@@ -27,14 +27,14 @@
   --auto-grid-min-size: 10rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 0.5rem;
+  grid-gap: 0.250rem;
 }
 
 .auto-grid-barakhadi {
-  --auto-grid-min-size: 5rem;
+  --auto-grid-min-size: 7rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 0.150rem;
+  grid-gap: 0.250rem;
 }
 
 body {
