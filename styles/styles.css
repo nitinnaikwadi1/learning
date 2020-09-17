@@ -30,6 +30,13 @@
   grid-gap: 0.250rem;
 }
 
+.auto-grid-ucchar {
+  --auto-grid-min-size: 15rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 0.500rem;
+}
+
 .auto-grid-barakhadi {
   --auto-grid-min-size: 7rem;
   display: grid;
@@ -91,6 +98,23 @@ li.ank{
   text-shadow: 1.7px 1.7px 1.7px rgba(0,0,0,.7);
   }
 
+  li.ucchar{
+    padding: 0.6rem;
+    background-color: #03b2b2;
+    font-family: genericUnicode;
+    color: #fff;
+    text-align: center;
+    font-size: calc(6vw + 6vh + 3vmin);
+    text-decoration: none;
+    border: none;
+    border-radius: 1px;
+    position: relative;
+    box-shadow: 3px 0px 3px 0px rgba(0,0,0,.1);
+    border-left: 4px solid #03b2b2;  
+    text-shadow: 1.7px 1.7px 1.7px rgba(0,0,0,.7);
+    }
+  
+
 li.ek-100{
   padding: 0.5rem;
   background-color: #961a42;
@@ -121,7 +145,7 @@ ul {
 
 @font-face {
   font-family: genericUnicode;
-  src: url('./../fonts/eczar.ttf');
+  src: url('./../fonts/notosans.ttf');
 }
 
 .disableTextSelection {
