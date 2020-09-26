@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/howler.min.js"></script>
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="app">
+    <ul class="auto-grid-anuswar container">
+      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
+        <li :id='"div"+index' class="disableTextSelection anuswar">{{card.text}}</li>
+      </div>
+    </ul>
+  </div>
+</body>
+
+<!-- events such as fade and play audio when cards is clicked -->
+<script>
+  var sound = null;
+  var app = new Vue({
+    el: '#app',
+    data: {
+      dataFeed: [],
+      animDelay: 150,
+      audioURLPrefix: "audio/anuswar/",
+      feedURLPrefix:  "data/"
+    },
+    mounted: function () {
+      fetch('data/anuswar.json', {mode: 'no-cors'})
+        .then(response => response.json())
+        .then(data => {
+          this.dataFeed = data.dataFeed1;
+        })
+    },
+    created: function () {},
+    computed: {},
+    methods: {
+      playSelectedWord(whichIndex, whichMedia) {
+        this.addFadeBehaviour(whichIndex);
+        if (sound != null) {
+        sound.stop();
+        sound.unload();
+        sound = null;
+    }
+        sound = new Howl({
+          src: [this.audioURLPrefix + whichMedia + ".mp3"]
+        });
+        sound.play();
+      },
+      addFadeBehaviour(whichIndex) {
+        $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
+          fadeOut(this.animDelay).fadeIn(this.animDelay);
+      },
+    },
+  })
+</script>
+<!-- events such as fade and play audio when cards is clicked -->
+
+</html>
