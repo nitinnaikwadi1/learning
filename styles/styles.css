@@ -127,7 +127,7 @@ li.ank {
 
 li.anuswar {
   padding: 0.3rem;
-  background-color: #880E4F;
+  background-color: #880e4f;
   font-family: genericUnicode;
   color: #fff;
   text-align: center;
@@ -137,7 +137,7 @@ li.anuswar {
   border-radius: 1px;
   position: relative;
   box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #880E4F;
+  border-left: 4px solid #880e4f;
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
 }
 
@@ -170,6 +170,22 @@ li.ek-100 {
   position: relative;
   box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
   border-left: 4px solid #961a42;
+  text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
+}
+
+li.ucchar {
+  padding: 0.6rem;
+  background-color: #03b2b2;
+  font-family: genericUnicode;
+  color: #fff;
+  text-align: center;
+  font-size: calc(6vw + 6vh + 3vmin);
+  text-decoration: none;
+  border: none;
+  border-radius: 1px;
+  position: relative;
+  box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #03b2b2;
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
 }
 
