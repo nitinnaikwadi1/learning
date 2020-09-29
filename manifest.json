@@ -1,6 +1,6 @@
 {
-  "name": "Marathi Interactive",
-  "short_name": "Marathi",
+  "name": "मात्रा",
+  "short_name": "मात्रा",
   "start_url": "ekmatra.html?launcher=true",
   "display": "standalone",
   "background_color": "#F4F4F4",
