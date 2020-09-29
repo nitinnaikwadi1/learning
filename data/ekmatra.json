@@ -1,0 +1,179 @@
+{
+    "dataFeed1": [
+        {
+            "id": "1",
+            "text": "के",
+            "audio": "1-ke"
+        },
+        {
+            "id": "2",
+            "text": "खे",
+            "audio": "2-khe"
+        },
+        {
+            "id": "3",
+            "text": "गे",
+            "audio": "3-ge"
+        },
+        {
+            "id": "4",
+            "text": "घे",
+            "audio": "4-ghe"
+        },
+        {
+            "id": "5",
+            "text": "चे",
+            "audio": "5-che"
+        },
+        {
+            "id": "6",
+            "text": "छे",
+            "audio": "6-chey"
+        },
+        {
+            "id": "7",
+            "text": "जे",
+            "audio": "7-je"
+        },
+        {
+            "id": "8",
+            "text": "झे",
+            "audio": "8-jhe"
+        },
+        {
+            "id": "9",
+            "text": "ञे",
+            "audio": "9-tre"
+        },
+        {
+            "id": "10",
+            "text": "टे",
+            "audio": "10-te"
+        },
+        {
+            "id": "11",
+            "text": "ठे",
+            "audio": "11-the"
+        },
+        {
+            "id": "12",
+            "text": "डे",
+            "audio": "12-de"
+        },
+        {
+            "id": "13",
+            "text": "ढे",
+            "audio": "13-dhe"
+        },
+        {
+            "id": "14",
+            "text": "णे",
+            "audio": "14-ne"
+        },
+        {
+            "id": "15",
+            "text": "ते",
+            "audio": "15-tey"
+        },
+        {
+            "id": "16",
+            "text": "थे",
+            "audio": "17-they"
+        },
+        {
+            "id": "17",
+            "text": "दे",
+            "audio": "16-dey"
+        },
+        {
+            "id": "18",
+            "text": "धे",
+            "audio": "18-dhey"
+        },
+        {
+            "id": "19",
+            "text": "ने",
+            "audio": "19-ney"
+        },
+        {
+            "id": "20",
+            "text": "पे",
+            "audio": "20-pe"
+        },
+        {
+            "id": "21",
+            "text": "फे",
+            "audio": "21-phe"
+        },
+        {
+            "id": "22",
+            "text": "बे",
+            "audio": "22-be"
+        },
+        {
+            "id": "23",
+            "text": "भे",
+            "audio": "23-bhe"
+        },
+        {
+            "id": "24",
+            "text": "मे",
+            "audio": "24-mey"
+        },
+        {
+            "id": "25",
+            "text": "ये",
+            "audio": "25-ye"
+        },
+        {
+            "id": "26",
+            "text": "रे",
+            "audio": "26-rey"
+        },
+        {
+            "id": "27",
+            "text": "ले",
+            "audio": "27-ley"
+        },
+        {
+            "id": "28",
+            "text": "वे",
+            "audio": "28-wey"
+        },
+        {
+            "id": "29",
+            "text": "शे",
+            "audio": "29-shey"
+        },
+        {
+            "id": "30",
+            "text": "षे",
+            "audio": "30-sheye"
+        },
+        {
+            "id": "31",
+            "text": "से",
+            "audio": "31-sey"
+        },
+        {
+            "id": "32",
+            "text": "हे",
+            "audio": "32-hay"
+        },
+        {
+            "id": "33",
+            "text": "ळे",
+            "audio": "33-aley"
+        },
+        {
+            "id": "34",
+            "text": "क्षे",
+            "audio": "34-kshey"
+        },
+        {
+            "id": "35",
+            "text": "ज्ञे",
+            "audio": "35-dney"
+        }
+    ]
+}
