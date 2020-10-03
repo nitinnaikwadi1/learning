@@ -94,6 +94,17 @@
   grid-gap: 0.25rem;
 }
 
+.auto-grid-words {
+  --auto-grid-min-size: 20rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 0.25rem;
+  margin: 10px;
+}
+
 .auto-grid-numpad {
   --auto-grid-min-size: 8rem;
   display: grid;
@@ -116,6 +127,22 @@ li.mulakshar {
   color: #fff;
   text-align: center;
   font-size: calc(3vw + 3vh + 2vmin);
+  text-decoration: none;
+  border: none;
+  border-radius: 1px;
+  position: relative;
+  box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #029191;
+  text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
+}
+
+li.words {
+  padding: 0.5rem;
+  background-color: #029191;
+  font-family: genericUnicode;
+  color: #fff;
+  text-align: center;
+  font-size: calc(2vw + 2vh + 2vmin);
   text-decoration: none;
   border: none;
   border-radius: 1px;
