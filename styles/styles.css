@@ -94,6 +94,16 @@
   grid-gap: 0.25rem;
 }
 
+.auto-grid-numpad {
+  --auto-grid-min-size: 8rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 0.25rem;
+}
+
 body {
   background: #ffffff;
   margin: 2px;
@@ -243,6 +253,22 @@ li.ucchar {
   border-left: 4px solid #03b2b2;
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
 }
+label {
+  letter-spacing: 15px;
+}
+li.numpad {
+  background-color: #9E1030FF;
+  font-family: numpadUnicode;
+  color: #fff;
+  text-align: center;
+  font-size: calc(4vw + 4vh + 2vmin);
+  text-decoration: none;
+  border: none;
+  position: relative;
+  box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #9E1030FF;
+  text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
+}
 
 @keyframes fadeEffect {
   50% {
@@ -256,10 +282,28 @@ ul {
   list-style: none;
   list-style-type: none;
 }
+body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url('./../assets/brand.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: visible !important;
+}
+
 
 @font-face {
   font-family: genericUnicode;
   src: url("./../fonts/notosans.ttf");
+}
+
+@font-face {
+  font-family: numpadUnicode;
+  src: url("./../fonts/rhodium.ttf");
 }
 
 .disableTextSelection {
@@ -303,4 +347,26 @@ ul {
 .center-div {
   display: flex;
   justify-content: center;
+}
+
+.numpad-text-div {
+  display: flex;
+  justify-content: center;
+  font-family: numpadUnicode;
+  font-size: 18rem;
+  text-decoration: none;
+  border: none;
+  color:#00A4CCFF;
+  position: relative;
+}
+
+.footer-numpad {
+  position: fixed;
+  bottom: 0;
+  margin-left: -2px;
+  height: auto;
+  width: 100%;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 3px 0px 3px 0px #961a42;
 }
