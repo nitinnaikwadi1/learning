@@ -316,7 +316,7 @@ li.ank-random {
   font-family: genericUnicode;
   color: #fff;
   text-align: center;
-  font-size: calc(6vw + 6vh + 4vmin);
+  font-size: calc(4vw + 4vh + 3vmin);
   text-decoration: none;
   border: none;
   position: relative;
