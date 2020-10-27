@@ -115,6 +115,17 @@
   grid-gap: 0.25rem;
 }
 
+.auto-grid-ank-random {
+  --auto-grid-min-size: 8rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 0.25rem;
+}
+
+
 body {
   background: #ffffff;
   margin: 2px;
@@ -284,12 +295,28 @@ li.ucchar {
 label {
   letter-spacing: 15px;
 }
+
 li.numpad {
   background-color: #9E1030FF;
   font-family: numpadUnicode;
   color: #fff;
   text-align: center;
   font-size: calc(4vw + 4vh + 2vmin);
+  text-decoration: none;
+  border: none;
+  position: relative;
+  box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #9E1030FF;
+  text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
+}
+
+
+li.ank-random {
+  background-color: #9E1030FF;
+  font-family: genericUnicode;
+  color: #fff;
+  text-align: center;
+  font-size: calc(6vw + 6vh + 4vmin);
   text-decoration: none;
   border: none;
   position: relative;
