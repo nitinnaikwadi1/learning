@@ -105,6 +105,17 @@
   margin: 10px;
 }
 
+.auto-grid-randomm {
+  --auto-grid-min-size: 14rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 0.25rem;
+  margin: 10px;
+}
+
 .auto-grid-numpad {
   --auto-grid-min-size: 8rem;
   display: grid;
