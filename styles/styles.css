@@ -126,6 +126,18 @@
   grid-gap: 0.25rem;
 }
 
+.auto-grid-screen {
+  --auto-grid-min-size: 8rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 0.5rem;
+  margin: 15px;
+  
+}
+
 .auto-grid-ank-random {
   --auto-grid-min-size: 8rem;
   display: grid;
@@ -321,6 +333,18 @@ li.numpad {
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
 }
 
+li.screen {
+  background-color: #9E1030FF;
+  font-family: numpadUnicode;
+  color: #fff;
+  text-align: center;
+  font-size: calc(1.5vw + 1.5vh + 1.5vmin);
+  text-decoration: none;
+  border: none;
+  position: relative;
+  box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
+}
 
 li.ank-random {
   background-color: #9E1030FF;
