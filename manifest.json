@@ -1,7 +1,7 @@
 {
   "name": "Numpad",
   "short_name": "Numpad",
-  "start_url": "numpad.html?launcher=true",
+  "start_url": "words.html?launcher=true",
   "display": "standalone",
   "background_color": "#F4F4F4",
   "theme_color": "#F4F4F4", 
