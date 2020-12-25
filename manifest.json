@@ -1,6 +1,6 @@
 {
-  "name": "Numpad",
-  "short_name": "Numpad",
+  "name": "Words",
+  "short_name": "Words",
   "start_url": "words.html?launcher=true",
   "display": "standalone",
   "background_color": "#F4F4F4",
