@@ -8,11 +8,6 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "assets/images/logo-72x72.png",
-      "type": "image/png", 
-      "sizes": "72x72"
-    },
-    {
       "src": "assets/images/logo-96x96.png",
       "type": "image/png",
       "sizes": "96x96"
