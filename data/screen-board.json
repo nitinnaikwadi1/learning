@@ -1,70 +1,60 @@
 {
     "menuData": [
-        
+        {
+            "id": "standard",
+            "menuText": "अ"
+        },
         {
             "id": "kana",
-            "text": "ा",
-            "isMenu":"true"
+            "menuText": "ा"
         },
         {
             "id": "matra",
-            "text": "े",
-            "isMenu":"true"
+            "menuText": "े"
         },
         {
             "id": "donmatra",
-            "text": "ै",
-            "isMenu":"true"
+            "menuText": "ै"
         },
         {
             "id": "pahiliWelanti",
-            "text": "ि",
-            "isMenu":"true"
+            "menuText": "ि"
         },
         {
             "id": "dusriWelanti",
-            "text": "ी",
-            "isMenu":"true"
+            "menuText": "ी"
         },
         {
             "id": "pahilaUkar",
-            "text": "ु",
-            "isMenu":"true"
+            "menuText": "ु"
         },
         {
             "id": "dusraUkar",
-            "text": "ू",
-            "isMenu":"true"
+            "menuText": "ू"
         },
         {
             "id": "kanaEkMatra",
-            "text": "ो",
-            "isMenu":"true"
+            "menuText": "ो"
         },
         {
             "id": "kanaDonMatra",
-            "text": "ौ",
-            "isMenu":"true"
+            "menuText": "ौ"
         },
         {
             "id": "anuswar",
-            "text": "अं",
-            "isMenu":"true"
+            "menuText": "ं"
         },
         {
             "id": "ardhchandr",
-            "text": "ॲ",
-            "isMenu":"true"
+            "menuText": "ॅ"
         },
         {
             "id": "kanaArdhchandr",
-            "text": "ऑ",
-            "isMenu":"true"
+            "menuText": "ॉ"
         },
         {
             "id":"clear",
-            "text": "●",
-            "isMenu":"true"
+            "menuText": "●"
         }
     ],
     "barakhadi": [
@@ -261,146 +251,328 @@
             "audio": "48-dnya"
         }
     ],
-    "kana": [
+    "anuswar": [
         {
-            "text": "का",
-            "audio": "1-a"
+            "text": "अं"
         },
         {
-            "text": "खा",
-            "audio": "2-aa"
+            "text": "कं"
         },
         {
-            "text": "गा",
-            "audio": "3-e"
+            "text": "खं"
         },
         {
-            "text": "घा",
-            "audio": "4-ie"
+            "text": "गं"
         },
         {
-            "text": "चा",
-            "audio": "5-u"
+            "text": "घं"
         },
         {
-            "text": "छा",
-            "audio": "6-uu"
+            "text": "चं"
         },
         {
-            "text": "जा",
-            "audio": "7-aye"
+            "text": "छं"
         },
         {
-            "text": "झा",
-            "audio": "8-aie"
+            "text": "जं"
         },
         {
-            "text": "ञा",
-            "audio": "9-oo"
+            "text": "झं"
         },
         {
-            "text": "टा",
-            "audio": "10-au"
+            "text": "ञं"
         },
         {
-            "text": "ठा",
-            "audio": "11-um"
+            "text": "टं"
         },
         {
-            "text": "डा",
-            "audio": "12-aha"
+            "text": "ठं"
         },
         {
-            "text": "ढा",
-            "audio": "13-ka"
+            "text": "डं"
         },
         {
-            "text": "णा",
-            "audio": "14-kh"
+            "text": "ढं"
         },
         {
-            "text": "ता",
-            "audio": "15-ga"
+            "text": "णं"
         },
         {
-            "text": "था",
-            "audio": "16-gh"
+            "text": "तं"
         },
         {
-            "text": "दा",
-            "audio": "17-anga"
+            "text": "थं"
         },
         {
-            "text": "धा",
-            "audio": "18-ch"
+            "text": "दं"
         },
         {
-            "text": "ना",
-            "audio": "19-cha"
+            "text": "धं"
         },
         {
-            "text": "पा",
-            "audio": "20-ja"
+            "text": "नं"
         },
         {
-            "text": "फा",
-            "audio": "21-jha"
+            "text": "पं"
         },
         {
-            "text": "बा",
-            "audio": "22-tra"
+            "text": "फं"
         },
         {
-            "text": "भा",
-            "audio": "23-ta"
+            "text": "बं"
         },
         {
-            "text": "मा",
-            "audio": "24-tha"
+            "text": "भं"
         },
         {
-            "text": "या",
-            "audio": "25-da"
+            "text": "मं"
         },
         {
-            "text": "रा",
-            "audio": "26-dha"
+            "text": "यं"
         },
         {
-            "text": "ला",
-            "audio": "27-na"
+            "text": "रं"
         },
         {
-            "text": "वा",
-            "audio": "28-ta"
+            "text": "लं"
         },
         {
-            "text": "शा",
-            "audio": "29-tha"
+            "text": "वं"
         },
         {
-            "text": "षा",
-            "audio": "30-da"
+            "text": "शं"
         },
         {
-            "text": "सा",
-            "audio": "31-dha"
+            "text": "षं"
         },
         {
-            "text": "हा",
-            "audio": "32-naa"
+            "text": "सं"
         },
         {
-            "text": "ळा",
-            "audio": "33-pa"
+            "text": "हं"
         },
         {
-            "text": "क्षा",
-            "audio": "34-pha"
+            "text": "ळं"
         },
         {
-            "text": "ज्ञा",
-            "audio": "35-ba"
+            "text": "क्षं"
+        },
+        {
+            "text": "ज्ञं"
+        }
+    ] ,
+    "ardhChandr": [
+        {
+            "text": "ॲ"
+        },
+        {
+            "text": "कॅ"
+        },
+        {
+            "text": "खॅ"
+        },
+        {
+            "text": "गॅ"
+        },
+        {
+            "text": "घॅ"
+        },
+        {
+            "text": "चॅ"
+        },
+        {
+            "text": "छॅ"
+        },
+        {
+            "text": "जॅ"
+        },
+        {
+            "text": "झॅ"
+        },
+        {
+            "text": "टॅ"
+        },
+        {
+            "text": "ठॅ"
+        },
+        {
+            "text": "डॅ"
+        },
+        {
+            "text": "ढॅ"
+        },
+        {
+            "text": "णॅ"
+        },
+        {
+            "text": "तॅ"
+        },
+        {
+            "text": "थॅ"
+        },
+        {
+            "text": "दॅ"
+        },
+        {
+            "text": "धॅ"
+        },
+        {
+            "text": "नॅ"
+        },
+        {
+            "text": "पॅ"
+        },
+        {
+            "text": "फॅ"
+        },
+        {
+            "text": "बॅ"
+        },
+        {
+            "text": "भॅ"
+        },
+        {
+            "text": "मॅ"
+        },
+        {
+            "text": "यॅ"
+        },
+        {
+            "text": "रॅ"
+        },
+        {
+            "text": "लॅ"
+        },
+        {
+            "text": "वॅ"
+        },
+        {
+            "text": "शॅ"
+        },
+        {
+            "text": "षॅ"
+        },
+        {
+            "text": "सॅ"
+        },
+        {
+            "text": "हॅ"
+        },
+        {
+            "text": "ळॅ"
+        },
+        {
+            "text": "क्षॅ"
+        },
+        {
+            "text": "ज्ञॅ"
+        }
+    ] ,
+    "kanaArdhchandr": [
+        {
+            "text": "ऑ"
+        },
+        {
+            "text": "कॉ"
+        },
+        {
+            "text": "खॉ"
+        },
+        {
+            "text": "गॉ"
+        },
+        {
+            "text": "घॉ"
+        },
+        {
+            "text": "चॉ"
+        },
+        {
+            "text": "छॉ"
+        },
+        {
+            "text": "जॉ"
+        },
+        {
+            "text": "झॉ"
+        },
+        {
+            "text": "टॉ"
+        },
+        {
+            "text": "ठॉ"
+        },
+        {
+            "text": "डॉ"
+        },
+        {
+            "text": "ढॉ"
+        },
+        {
+            "text": "णॉ"
+        },
+        {
+            "text": "तॉ"
+        },
+        {
+            "text": "थॉ"
+        },
+        {
+            "text": "दॉ"
+        },
+        {
+            "text": "धॉ"
+        },
+        {
+            "text": "नॉ"
+        },
+        {
+            "text": "पॉ"
+        },
+        {
+            "text": "फॉ"
+        },
+        {
+            "text": "बॉ"
+        },
+        {
+            "text": "भॉ"
+        },
+        {
+            "text": "मॉ"
+        },
+        {
+            "text": "यॉ"
+        },
+        {
+            "text": "रॉ"
+        },
+        {
+            "text": "लॉ"
+        },
+        {
+            "text": "वॉ"
+        },
+        {
+            "text": "शॉ"
+        },
+        {
+            "text": "षॉ"
+        },
+        {
+            "text": "सॉ"
+        },
+        {
+            "text": "हॉ"
+        },
+        {
+            "text": "ळॉ"
+        },
+        {
+            "text": "क्षॉ"
+        },
+        {
+            "text": "ज्ञॉ"
         }
     ]       
 }

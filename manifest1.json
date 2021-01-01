@@ -1,6 +1,6 @@
 {
-  "name": "Random Mulakshare",
-  "short_name": "Random Mulakshare",
+  "name": "Random",
+  "short_name": "Random ",
   "start_url": "screen.html?launcher=true",
   "display": "fullscreen",
   "background_color": "#F4F4F4",

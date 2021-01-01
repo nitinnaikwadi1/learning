@@ -5,102 +5,70 @@
 .auto-grid {
   --auto-grid-min-size: 15rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 1rem;
 }
 
 .auto-grid-ek-100 {
   --auto-grid-min-size: 8rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.5rem;
 }
 
 .auto-grid-abcd {
   --auto-grid-min-size: 8rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.5rem;
 }
 
 .auto-grid-ank {
   --auto-grid-min-size: 10rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.25rem;
 }
 
 .auto-grid-ucchar {
   --auto-grid-min-size: 15rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.5rem;
 }
 
 .auto-grid-anuswar {
   --auto-grid-min-size: 6rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.5rem;
 }
-
 
 .auto-grid-ekmatra {
   --auto-grid-min-size: 6rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.25rem;
 }
 
 .auto-grid-ekkanamatra {
   --auto-grid-min-size: 6rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.25rem;
 }
-
 
 .auto-grid-barakhadi {
   --auto-grid-min-size: 7rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.25rem;
 }
 
 .auto-grid-words {
   --auto-grid-min-size: 20rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.25rem;
   margin: 10px;
 }
@@ -108,10 +76,7 @@
 .auto-grid-randomm {
   --auto-grid-min-size: 14rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.25rem;
   margin: 10px;
 }
@@ -119,35 +84,24 @@
 .auto-grid-numpad {
   --auto-grid-min-size: 8rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.25rem;
 }
 
 .auto-grid-screen {
   --auto-grid-min-size: 8rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.5rem;
   margin: 15px;
-  
 }
 
 .auto-grid-ank-random {
   --auto-grid-min-size: 8rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
   grid-gap: 0.25rem;
 }
-
 
 body {
   background: #ffffff;
@@ -267,7 +221,6 @@ li.ekkanamatra {
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
 }
 
-
 li.abcd {
   padding: 0.5rem;
   background-color: #e67e22;
@@ -308,13 +261,14 @@ li.ucchar {
   text-align: center;
   font-size: calc(6vw + 6vh + 3vmin);
   text-decoration: none;
-  border: none;
+  border: none; 
   border-radius: 1px;
   position: relative;
   box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
   border-left: 4px solid #03b2b2;
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
 }
+
 label {
   letter-spacing: 15px;
 }
@@ -334,7 +288,20 @@ li.numpad {
 }
 
 li.screen {
-  background-color: #9E1030FF;
+  background-color: #880e4f;
+  font-family: numpadUnicode;
+  color: #fff;
+  text-align: center;
+  font-size: calc(1.5vw + 1.5vh + 1.5vmin);
+  text-decoration: none;
+  border: none;
+  position: relative;
+  box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
+}
+
+li.swar {
+  background-color: #961a42;
   font-family: numpadUnicode;
   color: #fff;
   text-align: center;
@@ -372,6 +339,11 @@ ul {
   list-style: none;
   list-style-type: none;
 }
+
+.no-border {
+  border: none;
+}
+
 body, #root {
   margin: 0;
   padding: 0;
@@ -388,7 +360,6 @@ body, #root {
   overflow: visible !important;
 }
 
-
 @font-face {
   font-family: genericUnicode;
   src: url("./../fonts/notosans.ttf");
@@ -400,19 +371,19 @@ body, #root {
 }
 
 .disableTextSelection {
-  -webkit-touch-callout: none;
   /* iOS Safari */
-  -webkit-user-select: none;
+  -webkit-touch-callout: none;
   /* Safari */
-  -khtml-user-select: none;
+  -webkit-user-select: none;
   /* Konqueror HTML */
-  -moz-user-select: none;
+  -khtml-user-select: none;
   /* Firefox */
-  -ms-user-select: none;
+  -moz-user-select: none;
   /* Internet Explorer/Edge */
-  user-select: none;
+  -ms-user-select: none;
   /* Non-prefixed version, currently
      supported by Chrome and Opera */
+  user-select: none;
 }
 
 .container {
@@ -449,7 +420,18 @@ body, #root {
   font-size: 18rem;
   text-decoration: none;
   border: none;
-  color:#00A4CCFF;
+  color: #00A4CCFF;
+  position: relative;
+}
+
+.screen-text-div {
+  display: flex;
+  justify-content: center;
+  font-family: genericUnicode;
+  font-size: 12rem;
+  text-decoration: none;
+  border: none;
+  color: #00A4CCFF;
   position: relative;
 }
 
