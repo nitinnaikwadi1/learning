@@ -314,16 +314,17 @@ li.swar {
 }
 
 li.ank-random {
-  background-color: #9E1030FF;
-  font-family: genericUnicode;
-  color: #fff;
-  text-align: center;
-  font-size: calc(5vw + 5vh + 4vmin);
+  padding: 0.22rem;
+  background-color: #029191;
+  font-family: numpadUnicode;
+  color: #ffffff;
+  text-align: left;
+  font-size: calc(2vw + 2vh + 2vmin);
   text-decoration: none;
   border: none;
   position: relative;
   box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #9E1030FF;
+  border-left: 4px solid #029191;
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
 }
 
