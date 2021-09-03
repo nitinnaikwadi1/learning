@@ -97,10 +97,10 @@
 }
 
 .auto-grid-ank-random {
-  --auto-grid-min-size: 8rem;
+  --auto-grid-min-size: 16rem;
   display: grid;
   grid-template-columns: repeat( auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 0.25rem;
+  grid-gap: 0.5rem;
 }
 
 body {
@@ -314,18 +314,22 @@ li.swar {
 }
 
 li.ank-random {
-  padding: 0.22rem;
+  padding: 0.25rem;
   background-color: #029191;
   font-family: numpadUnicode;
   color: #ffffff;
   text-align: left;
-  font-size: calc(2vw + 2vh + 2vmin);
+  font-size: calc(4vw + 4vh + 4vmin);
   text-decoration: none;
   border: none;
   position: relative;
   box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.1);
   border-left: 4px solid #029191;
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
+}
+
+li.ank-random:hover {
+  background-color: #fc5c65;
 }
 
 @keyframes fadeEffect {
