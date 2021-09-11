@@ -7,21 +7,27 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body>
   <div id="app">
-    <ul class="auto-grid-ank container">
+    <ul class="auto-grid-small-list container">
       <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
-        <li :id='"div"+index' class="disableTextSelection ank">{{card.text}}</li>
+        <li :id='"div"+index' class="disableTextSelection generic card-fill">{{card.text}}</li>
       </div>
     </ul>
+    <footer class="footer">
+      <div class="center-div" onclick="location.href='dashboard.html';">
+        <i class="fas fa-stop-circle fa-4x back-button" style="color:#961a42;"></i>
+      </div>
+    </footer>
   </div>
 </body>
 
-<!-- events such as fade and play audio when cards is clicked -->
+<!-- events such as fade and play audio when card is clicked -->
 <script>
   var sound = null;
   var app = new Vue({
@@ -29,26 +35,25 @@
     data: {
       dataFeed: [],
       animDelay: 150,
-      audioURLPrefix: "audio/numbers/",
-      feedURLPrefix:  "data/"
+      audioURLPrefix: "audio/1to100/"
     },
     mounted: function () {
-      fetch('data/eng-numbers.json', {mode: 'no-cors'})
+      fetch('data/eng-numbers.json', { mode: 'no-cors' })
         .then(response => response.json())
         .then(data => {
           this.dataFeed = data.dataFeed;
         })
     },
-    created: function () {},
+    created: function () { },
     computed: {},
     methods: {
       playSelectedWord(whichIndex, whichMedia) {
         this.addFadeBehaviour(whichIndex);
         if (sound != null) {
-        sound.stop();
-        sound.unload();
-        sound = null;
-    }
+          sound.stop();
+          sound.unload();
+          sound = null;
+        }
         sound = new Howl({
           src: [this.audioURLPrefix + whichMedia + ".mp3"]
         });
@@ -61,6 +66,6 @@
     },
   })
 </script>
-<!-- events such as fade and play audio when cards is clicked -->
+<!-- events such as fade and play audio when card is clicked -->
 
 </html>

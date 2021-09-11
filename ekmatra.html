@@ -7,7 +7,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/styles.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="manifest" href="manifest.json">
   <link rel="shortcut icon" href="/images/logo-512x512.png">
@@ -21,15 +21,20 @@
 
 <body>
   <div id="app">
-    <ul class="auto-grid-ekmatra container">
+    <ul class="auto-grid-generic container">
       <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
-        <li :id='"div"+index' class="disableTextSelection ekmatra">{{card.text}}</li>
+        <li :id='"div"+index' class="disableTextSelection mulakshar card-fill">{{card.text}}</li>
       </div>
     </ul>
+    <footer class="footer">
+      <div class="center-div" onclick="location.href='dashboard.html';">
+        <i class="fas fa-stop-circle fa-4x back-button" style="color:#961a42;"></i>
+      </div>
+    </footer>
   </div>
 </body>
 
-<!-- events such as fade and play audio when cards is clicked -->
+<!-- events such as fade and play audio when card is clicked -->
 <script>
   var sound = null;
   var app = new Vue({
@@ -37,14 +42,13 @@
     data: {
       dataFeed: [],
       animDelay: 150,
-      audioURLPrefix: "audio/ekmatra/",
-      feedURLPrefix:  "data/"
+      audioURLPrefix: "audio/ekmatra/"
     },
     mounted: function () {
-      fetch('data/ekmatra.json', {mode: 'no-cors'})
+      fetch('data/mulakshar-ek-matra.json', {mode: 'no-cors'})
         .then(response => response.json())
         .then(data => {
-          this.dataFeed = data.dataFeed1;
+          this.dataFeed = data.dataFeed;
         })
     },
     created: function () {},
@@ -69,6 +73,6 @@
     },
   })
 </script>
-<!-- events such as fade and play audio when cards is clicked -->
+<!-- events such as fade and play audio when card is clicked -->
 
 </html>

@@ -7,7 +7,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
-  <link rel="stylesheet" href="styles/dashboard.css">
+  <link rel="stylesheet" href="styles/styles.min.css">
   <title>Marathi</title>
   <link rel="manifest" href="manifest.json">
   <link rel="shortcut icon" href="/images/logo-512x512.png">
@@ -17,26 +17,32 @@
   <meta name="theme-color" content="#FFE1C4">
   <script src="js/app.js"></script>
   <script src="js/ui.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body class="flexgrid">
+<body>
   <div id="app" class="container">
-    <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card)" class="thing">
-      <span :id='"div"+index' class="disableTextSelection">{{card.text}}</span>
+    <div class="row">
+      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card)" class="col-md-4 col-xl-3">
+        <div :class='card.style'>
+          <div class="card-block">
+            <h3 class="disableTextSelection">{{card.text}}</h3>
+            <i class="fa fa-rocket"></i>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
 </body>
 
-<!-- events such as fade and play audio when cards is clicked -->
+<!-- events such as fade and play audio when card is clicked -->
 <script>
   var app = new Vue({
     el: '#app',
     data: {
       dataFeed: [],
-      animDelay: 150,
-      audioURLPrefix: "audio/",
-      feedURLPrefix: "data/"
+      animDelay: 120,
     },
     mounted: function () {
       fetch('data/dashboard.json', { mode: 'no-cors' })
@@ -50,15 +56,7 @@
     methods: {
       playSelectedWord(whichIndex, whichCard) {
         this.addFadeBehaviour(whichIndex);
-        var sound = new Howl({
-          src: [this.audioURLPrefix + whichCard.audio + ".mp3"]
-        });
-        sound.play();
-
-        sound.on('end', function () {
-          //navigate to selected page
         window.location.href = whichCard.link;
-        });
       },
       addFadeBehaviour(whichIndex) {
         $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
@@ -67,7 +65,7 @@
     },
   })
 </script>
-<!-- events such as fade and play audio when cards is clicked -->
+<!-- events such as fade and play audio when card is clicked -->
 
 <!-- register service worker -->
 <script>

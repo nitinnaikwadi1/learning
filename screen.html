@@ -6,7 +6,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/howler.min.js"></script>
     <script src="js/vue.js"></script>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/styles.min.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -30,15 +30,15 @@
 
   <body class="no-border">
     <div id="app">
-      <label id="userText" class="screen-text-div"></label>
+      <label id="userText" class="text-div"></label>
 
-      <footer class="footer-numpad">
+      <footer class="footer-keypad">
         <ul class="auto-grid-screen">
           <div
             v-for="(card,index) in menuData"
             @click.prevent="setKeyboardContent(card.id,card.menuText)"
           >
-            <li :id='"div"+index' class="disableTextSelection swar">
+            <li :id='"div"+index' class="disableTextSelection screen">
               {{card.menuText}}
             </li>
           </div>
@@ -55,7 +55,7 @@
     </div>
   </body>
 
-  <!-- events such as fade and play audio when cards is clicked -->
+  <!-- events such as fade and play audio when card is clicked -->
   <script>
     var app = new Vue({
       el: "#app",
@@ -67,7 +67,6 @@
         ardhChandr: [],
         kanaArdhchandr: [],
         animDelay: 50,
-        feedURLPrefix: "data/",
       },
       mounted: function () {
         fetch("data/screen-board.json", { mode: "no-cors" })
@@ -126,5 +125,5 @@
       },
     });
   </script>
-  <!-- events such as fade and play audio when cards is clicked -->
+  <!-- events such as fade and play audio when card is clicked -->
 </html>

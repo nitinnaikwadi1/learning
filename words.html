@@ -6,7 +6,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/howler.min.js"></script>
     <script src="js/vue.js"></script>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/styles.min.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
@@ -25,7 +25,7 @@
 
   <body>
     <div id="app">
-      <ul class="auto-grid-words">
+      <ul class="auto-grid-words container">
         <div
           v-for="(card,index) in dataFeed"
           @click.prevent="playSelectedWord(index,card.audio)"
@@ -35,10 +35,15 @@
           </li>
         </div>
       </ul>
+      <footer class="footer">
+        <div class="center-div" onclick="location.href='dashboard.html';">
+          <i class="fas fa-stop-circle fa-4x back-button" style="color:#961a42;"></i>
+        </div>
+      </footer>
     </div>
   </body>
 
-  <!-- events such as fade and play audio when cards is clicked -->
+  <!-- events such as fade and play audio when card is clicked -->
   <script>
     var sound = null;
     var app = new Vue({
@@ -46,7 +51,6 @@
       data: {
         dataFeed: [],
         animDelay: 150,
-        feedURLPrefix: "data/",
         wordsCount: 35,
       },
       mounted: function () {
@@ -82,5 +86,5 @@
       },
     });
   </script>
-  <!-- events such as fade and play audio when cards is clicked -->
+  <!-- events such as fade and play audio when card is clicked -->
 </html>

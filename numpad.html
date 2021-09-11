@@ -7,8 +7,9 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="manifest" href="manifest.json">
   <link rel="shortcut icon" href="/images/logo-512x512.png">
   <link rel="icon" type="image/png" sizes="72x72" href="/images/logo-72x72.png">
@@ -21,43 +22,42 @@
 
 <body>
   <div id="app">
-    
-      <label id='userText' class="numpad-text-div"></label>
-    
-    <footer class="footer-numpad">
-        <ul class="auto-grid-numpad">
-          <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.text)">
-            <li :id='"div"+index' class="disableTextSelection numpad">{{card.text}}</li>
-          </div>
-        </ul>
+
+    <label id='userText' class="text-div"></label>
+
+    <footer class="footer-keypad">
+      <ul class="auto-grid-numpad">
+        <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.text)">
+          <li :id='"div"+index' class="disableTextSelection numpad">{{card.text}}</li>
+        </div>
+      </ul>
     </footer>
   </div>
 </body>
 
-<!-- events such as fade and play audio when cards is clicked -->
+<!-- events such as fade and play audio when card is clicked -->
 <script>
   var app = new Vue({
     el: '#app',
     data: {
       dataFeed: [],
       animDelay: 50,
-      feedURLPrefix:  "data/"
     },
     mounted: function () {
-      fetch('data/numpad.json', {mode: 'no-cors'})
+      fetch('data/numpad.json', { mode: 'no-cors' })
         .then(response => response.json())
         .then(data => {
           this.dataFeed = data.dataFeed;
         })
     },
-    created: function () {},
+    created: function () { },
     computed: {},
     methods: {
       playSelectedWord(whichIndex, whichMedia) {
-        if(whichIndex == 10){
-          document.getElementById("userText").innerHTML="";
-        }else{
-          document.getElementById("userText").innerHTML=$('label').text()+whichMedia;
+        if (whichIndex == 10) {
+          document.getElementById("userText").innerHTML = "";
+        } else {
+          document.getElementById("userText").innerHTML = $('label').text() + whichMedia;
         }
         this.addFadeBehaviour(whichIndex);
       },
@@ -68,6 +68,6 @@
     },
   })
 </script>
-<!-- events such as fade and play audio when cards is clicked -->
+<!-- events such as fade and play audio when card is clicked -->
 
 </html>
