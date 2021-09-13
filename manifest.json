@@ -1,7 +1,7 @@
 {
-  "name": "Random Mulakshare",
-  "short_name": "Random Mulakshare",
-  "start_url": "screen.html?launcher=true",
+  "name": "Marathi",
+  "short_name": "Marathi",
+  "start_url": "dashboard.html?launcher=true",
   "display": "fullscreen",
   "background_color": "#F4F4F4",
   "theme_color": "#F4F4F4", 

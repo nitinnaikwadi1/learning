@@ -1,129 +1,116 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="js/jquery.min.js"></script>
-    <script src="js/howler.min.js"></script>
-    <script src="js/vue.js"></script>
-    <link rel="stylesheet" href="styles/styles.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
-    <link rel="manifest" href="manifest1.json" />
-    <link rel="shortcut icon" href="/images/logo-512x512.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="72x72"
-      href="/images/logo-72x72.png"
-    />
-    <link rel="apple-touch-icon" href="assets/images/logo-96x96.png" />
-    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4" />
-    <meta name="theme-color" content="#FFE1C4" />
-    <script src="js/app.js"></script>
-    <script src="js/ui.js"></script>
-  </head>
 
-  <body class="no-border">
-    <div id="app">
-      <label id="userText" class="text-div"></label>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/howler.min.js"></script>
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" href="styles/styles.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+  <link rel="manifest" href="manifest1.json" />
+  <link rel="shortcut icon" href="/images/logo-512x512.png" />
+  <link rel="icon" type="image/png" sizes="72x72" href="/images/logo-72x72.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo-96x96.png" />
+  <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4" />
+  <meta name="theme-color" content="#FFE1C4" />
+  <script src="js/app.js"></script>
+  <script src="js/ui.js"></script>
+</head>
 
-      <footer class="footer-keypad">
-        <ul class="auto-grid-screen">
-          <div
-            v-for="(card,index) in menuData"
-            @click.prevent="setKeyboardContent(card.id,card.menuText)"
-          >
-            <li :id='"div"+index' class="disableTextSelection screen">
-              {{card.menuText}}
-            </li>
-          </div>
-          <div
-            v-for="(card,index) in dataFeed"
-            @click.prevent="writeLetter(index,card.text)"
-          >
-            <li :id='"div"+index' class="disableTextSelection screen">
-              {{card.text}}
-            </li>
-          </div>
-        </ul>
-      </footer>
-    </div>
-  </body>
+<body class="no-border">
+  <div id="app">
+    <label id="userText" class="text-div"></label>
 
-  <!-- events such as fade and play audio when card is clicked -->
-  <script>
-    var app = new Vue({
-      el: "#app",
-      data: {
-        dataFeed: [],
-        menuData: [],
-        mulakshar: [],
-        anuswar: [],
-        ardhChandr: [],
-        kanaArdhchandr: [],
-        animDelay: 50,
-      },
-      mounted: function () {
-        fetch("data/screen-board.json", { mode: "no-cors" })
-          .then((response) => response.json())
-          .then((data) => {
-            this.mulakshar = data.barakhadi;
+    <footer class="footer-keypad">
+      <ul class="auto-grid-screen">
+        <div v-for="(card,index) in menuData" @click.prevent="setKeyboardContent(card.id,card.menuText)">
+          <li :id='"div"+index' class="disableTextSelection screen">
+            {{card.menuText}}
+          </li>
+        </div>
+        <div v-for="(card,index) in dataFeed" @click.prevent="writeLetter(index,card.text)">
+          <li :id='"div"+index' class="disableTextSelection screen">
+            {{card.text}}
+          </li>
+        </div>
+      </ul>
+    </footer>
+  </div>
+</body>
+
+<!-- events such as fade and play audio when card is clicked -->
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      dataFeed: [],
+      menuData: [],
+      mulakshar: [],
+      anuswar: [],
+      ardhChandr: [],
+      kanaArdhchandr: [],
+      animDelay: 50,
+    },
+    mounted: function () {
+      fetch("data/screen-board.json", { mode: "no-cors" })
+        .then((response) => response.json())
+        .then((data) => {
+          this.mulakshar = data.barakhadi;
+          this.dataFeed = this.mulakshar;
+          this.menuData = data.menuData;
+          this.anuswar = data.anuswar;
+          this.ardhChandr = data.ardhChandr;
+          this.kanaArdhchandr = data.kanaArdhchandr;
+        });
+    },
+    created: function () { },
+    computed: {},
+    methods: {
+      setKeyboardContent(whichIndex, whichMedia) {
+        switch (whichIndex) {
+          case "standard":
             this.dataFeed = this.mulakshar;
-            this.menuData = data.menuData;
-            this.anuswar = data.anuswar;
-            this.ardhChandr = data.ardhChandr;
-            this.kanaArdhchandr = data.kanaArdhchandr;
-          });
+            break;
+
+          case "anuswar":
+            this.dataFeed = this.anuswar;
+            break;
+          case "ardhchandr":
+            this.dataFeed = this.ardhChandr;
+            break;
+          case "kanaArdhchandr":
+            this.dataFeed = this.kanaArdhchandr;
+            break;
+          case "clear":
+            document.getElementById("userText").innerHTML = "";
+            break;
+
+          default:
+            document.getElementById("userText").innerHTML =
+              $("label").text() + whichMedia;
+            break;
+        }
+        this.addFadeBehaviour(whichIndex);
       },
-      created: function () {},
-      computed: {},
-      methods: {
-        setKeyboardContent(whichIndex, whichMedia) {
-          switch (whichIndex) {
-            case "standard":
-              this.dataFeed = this.mulakshar;
-              break;
+      writeLetter(whichIndex, whichMedia) {
+        document.getElementById("userText").innerHTML =
+          $("label").text() + whichMedia;
 
-            case "anuswar":
-              this.dataFeed = this.anuswar;
-              break;
-            case "ardhchandr":
-              this.dataFeed = this.ardhChandr;
-              break;
-            case "kanaArdhchandr":
-              this.dataFeed = this.kanaArdhchandr;
-              break;
-            case "clear":
-              document.getElementById("userText").innerHTML = "";
-              break;
-
-            default:
-              document.getElementById("userText").innerHTML =
-                $("label").text() + whichMedia;
-              break;
-          }
-          this.addFadeBehaviour(whichIndex);
-        },
-        writeLetter(whichIndex, whichMedia) {
-          document.getElementById("userText").innerHTML =
-            $("label").text() + whichMedia;
-
-          this.addFadeBehaviour(whichIndex);
-        },
-        addFadeBehaviour(whichIndex) {
-          $("#div" + whichIndex)
-            .fadeOut(this.animDelay)
-            .fadeIn(this.animDelay)
-            .fadeOut(this.animDelay)
-            .fadeIn(this.animDelay);
-        },
+        this.addFadeBehaviour(whichIndex);
       },
-    });
-  </script>
-  <!-- events such as fade and play audio when card is clicked -->
+      addFadeBehaviour(whichIndex) {
+        $("#div" + whichIndex)
+          .fadeOut(this.animDelay)
+          .fadeIn(this.animDelay)
+          .fadeOut(this.animDelay)
+          .fadeIn(this.animDelay);
+      },
+    },
+  });
+</script>
+<!-- events such as fade and play audio when card is clicked -->
+
 </html>

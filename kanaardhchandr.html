@@ -8,7 +8,8 @@
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
   <link rel="stylesheet" href="styles/styles.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="manifest" href="manifest.json">
   <link rel="shortcut icon" href="/images/logo-512x512.png">
   <link rel="icon" type="image/png" sizes="72x72" href="/images/logo-72x72.png">
@@ -43,25 +44,25 @@
     data: {
       dataFeed: [],
       animDelay: 150,
-      audioURLPrefix: "audio/kanaardhchandr/"
+      audioURLPrefix: "audio/mulakshar/"
     },
     mounted: function () {
-      fetch('data/mulakshar-kana-ardhchandr.json', {mode: 'no-cors'})
+      fetch('data/mulakshar-kana-ardhchandr.json', { mode: 'no-cors' })
         .then(response => response.json())
         .then(data => {
           this.dataFeed = data.dataFeed;
         })
     },
-    created: function () {},
+    created: function () { },
     computed: {},
     methods: {
       playSelectedWord(whichIndex, whichMedia) {
         this.addFadeBehaviour(whichIndex);
         if (sound != null) {
-        sound.stop();
-        sound.unload();
-        sound = null;
-    }
+          sound.stop();
+          sound.unload();
+          sound = null;
+        }
         sound = new Howl({
           src: [this.audioURLPrefix + whichMedia + ".mp3"]
         });

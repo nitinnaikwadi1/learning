@@ -1,18 +1,5 @@
 {
     "dataFeed": [
-
-        {
-            "text": "मुळाक्षरे",
-            "audio": "bell",
-            "link" : "mulakshar.html",
-            "style":"card bg-c-blue item-card"
-        },
-        {
-            "text": "मराठी अंक",
-            "audio": "bell",
-            "link" : "ank.html",
-            "style":"card bg-c-green item-card"
-        },
         {
             "text": "A B C B",
             "audio": "bell",
@@ -26,6 +13,48 @@
             "style":"card bg-c-yellow item-card"
         },
         {
+            "text": "अंक सराव",
+            "audio": "bell",
+            "link" : "ank-random.html",
+            "style":"card bg-c-green item-card"
+        },
+        {
+            "text": "शब्द ओळखा",
+            "audio": "bell",
+            "link" : "shabdsarav.html",
+            "style":"card bg-c-green item-card"
+        },
+        {
+            "text": "अक्षर सराव",
+            "audio": "bell",
+            "link" : "mulaksharsarav.html",
+            "style":"card bg-c-green item-card"
+        },
+        {
+            "text": "शब्द वाचन",
+            "audio": "bell",
+            "link" : "words.html",
+            "style":"card bg-c-green item-card"
+        },
+        {
+            "text": "वाक्य वाचन",
+            "audio": "bell",
+            "link" : "vakyasarav.html",
+            "style":"card bg-c-green item-card"
+        },
+        {
+            "text": "मुळाक्षरे",
+            "audio": "bell",
+            "link" : "mulakshar.html",
+            "style":"card bg-c-blue item-card"
+        },
+        {
+            "text": "मराठी अंक",
+            "audio": "bell",
+            "link" : "ank.html",
+            "style":"card bg-c-green item-card"
+        },
+        {
             "text": "१ ते १०० अंक",
             "audio": "bell",
             "link" : "1te100.html",
@@ -36,24 +65,6 @@
             "audio": "bell",
             "link" : "1to100.html",
             "style":"card bg-c-pink item-card"
-        },
-        {
-            "text": "अंक सराव",
-            "audio": "bell",
-            "link" : "ank-random.html",
-            "style":"card bg-c-green item-card"
-        },
-        {
-            "text": "अक्षर सराव",
-            "audio": "bell",
-            "link" : "mulaksharsarav.html",
-            "style":"card bg-c-green item-card"
-        },
-        {
-            "text": "शब्द सराव",
-            "audio": "bell",
-            "link" : "words.html",
-            "style":"card bg-c-green item-card"
         },
         {
             "text": "काना",
@@ -100,13 +111,13 @@
         {
             "text": "काना एक मात्रा",
             "audio": "bell",
-            "link" : "ekkanaekmatra.html",
+            "link" : "kanaekmatra.html",
             "style":"card bg-c-yellow item-card"
         },
         {
             "text": "काना दोन मात्रा",
             "audio": "bell",
-            "link" : "ekkanadonmatra.html",
+            "link" : "kanadonmatra.html",
             "style":"card bg-c-pink item-card"
         },
         {
@@ -143,12 +154,6 @@
             "text": "अंक ओळखा",
             "audio": "bell",
             "link" : "numpad.html",
-            "style":"card bg-c-green item-card"
-        },
-        {
-            "text": "शब्द ओळखा",
-            "audio": "bell",
-            "link" : "shabdsarav.html",
             "style":"card bg-c-green item-card"
         },
         {

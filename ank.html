@@ -8,7 +8,8 @@
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
   <link rel="stylesheet" href="styles/styles.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body>
@@ -38,22 +39,22 @@
       audioURLPrefix: "audio/1te100/"
     },
     mounted: function () {
-      fetch('data/ank.json', {mode: 'no-cors'})
+      fetch('data/ank.json', { mode: 'no-cors' })
         .then(response => response.json())
         .then(data => {
           this.dataFeed = data.dataFeed;
         })
     },
-    created: function () {},
+    created: function () { },
     computed: {},
     methods: {
       playSelectedWord(whichIndex, whichMedia) {
         this.addFadeBehaviour(whichIndex);
         if (sound != null) {
-        sound.stop();
-        sound.unload();
-        sound = null;
-    }
+          sound.stop();
+          sound.unload();
+          sound = null;
+        }
         sound = new Howl({
           src: [this.audioURLPrefix + whichMedia + ".mp3"]
         });
