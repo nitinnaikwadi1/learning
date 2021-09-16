@@ -79,14 +79,15 @@
 .words {
   padding: 0.5rem;
   /* background-color: #4b1b1b; */
-  font-family: genericUnicode;
+  font-family: numpadUnicode;
+  font-weight: bold;
   color: #403c35;
   text-align: left;
   font-size: calc(2vw + 2vh + 2vmin);
   text-decoration: none;
   border: #d9d9d9;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   position: relative;
 }
 
@@ -159,11 +160,6 @@ body, #root {
 @font-face {
   font-family: numpadUnicode;
   src: url("./../fonts/rhodium.ttf");
-}
-
-@font-face {
-  font-family: marathiUnicode;
-  src: url("./../fonts/eczar.ttf");
 }
 
 .disableTextSelection {

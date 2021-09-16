@@ -16,15 +16,13 @@
   <link rel="apple-touch-icon" href="assets/images/logo-96x96.png">
   <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
   <meta name="theme-color" content="#FFE1C4">
-  <script src="js/app.js"></script>
-  <script src="js/ui.js"></script>
 </head>
 
 <body>
   <div id="app">
     <ul class="auto-grid-random container">
       <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
-        <li :id='"div"+index' class="disableTextSelection words">
+        <li :id='"div"+index' class="disableTextSelection generic-large card-fill">
           {{card.text}}
         </li>
       </div>

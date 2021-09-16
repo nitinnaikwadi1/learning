@@ -2,9 +2,13 @@
   "name": "Marathi",
   "short_name": "Marathi",
   "start_url": "dashboard.html?launcher=true",
+  "display_override": [
+    "window-control-overlay",
+    "minimal-ui"
+  ],
   "display": "fullscreen",
-  "background_color": "#F4F4F4",
-  "theme_color": "#F4F4F4", 
+  "background_color": "#029191",
+  "theme_color": "#029191",
   "orientation": "any",
   "icons": [
     {
@@ -26,6 +30,20 @@
       "src": "assets/images/logo-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Marathi",
+      "short_name": "Marathi",
+      "description": "learn a language",
+      "url": "dashboard.html",
+      "icons": [
+        {
+          "src": "assets/images/logo-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
