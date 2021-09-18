@@ -92,7 +92,7 @@
 }
 
 label {
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .numpad {
@@ -102,7 +102,31 @@ label {
   text-align: center;
   font-size: calc(2vw + 2vh + 2vmin);
   position: relative;
-  text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
+  text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.9);
+}
+
+.ek-word-div{
+  display: flex;
+  justify-content: center;
+  font-family: numpadUnicode;
+  text-decoration: none;
+  border: none;
+  color: #00A4CCFF;
+  text-align: center;
+  font-size: calc(6vw + 6vh + 6vmin);
+  position: relative;
+}
+
+.text-div {
+  display: flex;
+  justify-content: center;
+  font-family: numpadUnicode;
+  text-decoration: none;
+  border: none;
+  color: #00A4CCFF;
+  text-align: center;
+  font-size: calc(4vw + 4vh + 4vmin);
+  position: relative;
 }
 
 .screen {
@@ -192,20 +216,26 @@ body, #root {
   margin: 8px;
 }
 
+.ek-word-center-content {
+  margin: auto;
+  position: absolute;
+  display: grid;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.vertical-center {
+  margin: auto;
+  position: absolute;
+  display: grid;
+  top: 30%;
+}
+
 .center-div {
   display: flex;
   justify-content: space-evenly;
-}
-
-.text-div {
-  display: flex;
-  justify-content: center;
-  font-family: numpadUnicode;
-  font-size: 12rem;
-  text-decoration: none;
-  border: none;
-  color: #00A4CCFF;
-  position: relative;
 }
 
 .footer-keypad {
@@ -260,4 +290,19 @@ hr.seperate {
 
 .item-card i {
   font-size: 36px;
+}
+
+.ball {
+  position: fixed;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+
+#area_ball{
+  position:
+  absolute;
+  width: 50%;
+  height: 100vh;
+  background:#51c0b4;
+  overflow: hidden;
 }

@@ -5,13 +5,14 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
-  
-  <script> 
-    $(function(){ $("head").load("header.html") });
+
+  <script>
+    $(function () { $("head").load("header.html") });
   </script>
 </head>
 
 <body>
+  <script src="js/background.js"></script>
   <div id="app" class="container">
     <div class="row">
       <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card)" class="col-md-4 col-xl-3">
@@ -24,6 +25,7 @@
       </div>
     </div>
   </div>
+
 </body>
 
 <!-- events such as fade and play audio when card is clicked -->
