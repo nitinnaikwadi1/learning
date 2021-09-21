@@ -25,6 +25,12 @@
             "style":"card bg-c-green item-card"
         },
         {
+            "text": "अंक ओळखा",
+            "audio": "bell",
+            "link" : "anksarav.html",
+            "style":"card bg-c-green item-card"
+        },
+        {
             "text": "अक्षर सराव",
             "audio": "bell",
             "link" : "mulaksharsarav.html",
@@ -151,7 +157,7 @@
             "style":"card bg-c-green item-card"
         },
         {
-            "text": "अंक ओळखा",
+            "text": "अंक बनवा",
             "audio": "bell",
             "link" : "numpad.html",
             "style":"card bg-c-green item-card"

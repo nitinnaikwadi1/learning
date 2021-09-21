@@ -105,16 +105,17 @@ label {
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.9);
 }
 
-.ek-word-div{
+.ek-word-div {
   display: flex;
   justify-content: center;
   font-family: numpadUnicode;
   text-decoration: none;
   border: none;
-  color: #00A4CCFF;
+  color: #ffffff;
   text-align: center;
   font-size: calc(6vw + 6vh + 6vmin);
   position: relative;
+  line-height: 250px;
 }
 
 .text-div {
@@ -139,7 +140,7 @@ label {
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
 }
 
-.mulakshar:hover, .generic:hover, .generic-large:hover, .screen:hover, .numpad:hover {
+.mulakshar:hover, .generic:hover, .generic-large:hover, .screen:hover, .numpad:hover, .words:hover {
   background-color: #fc5c65;
 }
 
@@ -305,4 +306,53 @@ hr.seperate {
   height: 100vh;
   background:#51c0b4;
   overflow: hidden;
+}
+
+
+/* ripple circle animation effect */
+.blob {
+	border-radius: 50%;
+	height: 220px;
+	width: 220px;
+	transform: scale(0.5);
+}
+
+@keyframes pulse-black {
+	0% {
+		transform: scale(0.65);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+	
+	100% {
+		transform: scale(0.65);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+.blob.white {
+	background: #00A4CCFF;
+	box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+	animation: pulse-white 4s infinite;
+}
+
+@keyframes pulse-white {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 164, 204, 0.9);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+	}
+	
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	}
 }

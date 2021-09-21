@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="js/jquery.min.js"></script>
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
-  <link rel="stylesheet" href="styles/styles.min.css" />
+  <link rel="stylesheet" href="styles/styles.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="manifest" href="manifest.json">
   <link rel="shortcut icon" href="assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
@@ -22,13 +22,12 @@
 <body style="background: none !important;">
   <script src="js/background.js"></script>
   <div id="app">
-    <ul class="auto-grid-words container">
-      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
-        <li :id='"div"+index' class="disableTextSelection words">
-          {{card.text}}
-        </li>
+    <div v-for="(card,index) in dataFeed" class="ek-word-center-content">
+      <div class="blob white">
+        <label id='userText' class="disableTextSelection ek-word-div">{{card.text}}</label>
       </div>
-    </ul>
+    </div>
+
     <footer class="footer">
       <div class="center-div">
         <i class="fab fa-microsoft fa-3x back-button" style="color:#961a42;"
@@ -41,18 +40,17 @@
 
 <!-- events such as fade and play audio when card is clicked -->
 <script>
-  var sound = null;
   var app = new Vue({
-    el: "#app",
+    el: '#app',
     data: {
       dataFeed: [],
-      animDelay: 150,
-      wordsCount: 35,
+      animDelay: 50,
+      wordsCount: 1,
     },
     mounted: function () {
-      fetch("data/words.json", { mode: "no-cors" })
-        .then((response) => response.json())
-        .then((data) => {
+      fetch('data/1te100.json', { mode: 'no-cors' })
+        .then(response => response.json())
+        .then(data => {
           //generating required random indexs array from available words data
           //then identifying random seleted indices data from json
           //finally returning words to ui
@@ -61,7 +59,7 @@
             const currentIndex = this.getRandomInt(0, data.dataFeed.length);
             this.dataFeed.push(data.dataFeed[currentIndex]);
           }
-        });
+        })
     },
     created: function () { },
     computed: {},
@@ -70,17 +68,14 @@
         this.addFadeBehaviour(whichIndex);
       },
       addFadeBehaviour(whichIndex) {
-        $("#div" + whichIndex)
-          .fadeOut(this.animDelay)
-          .fadeIn(this.animDelay)
-          .fadeOut(this.animDelay)
-          .fadeIn(this.animDelay);
+        $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
+          fadeOut(this.animDelay).fadeIn(this.animDelay);
       },
       getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
       },
     },
-  });
+  })
 </script>
 <!-- events such as fade and play audio when card is clicked -->
 
