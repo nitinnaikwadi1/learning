@@ -140,8 +140,13 @@ label {
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.7);
 }
 
-.mulakshar:hover, .generic:hover, .generic-large:hover, .screen:hover, .numpad:hover, .words:hover {
+.mulakshar:hover, .generic:hover, .generic-large:hover, .screen:hover, .numpad:hover {
   background-color: #fc5c65;
+}
+
+.words:hover {
+  background-color: #fc5c65;
+  color: #fff;
 }
 
 @keyframes fadeEffect {
