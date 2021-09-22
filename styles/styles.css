@@ -199,6 +199,7 @@ body, #root {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.2);
 }
 
 .container {
