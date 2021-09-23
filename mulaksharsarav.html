@@ -47,6 +47,7 @@
       dataFeed: [],
       animDelay: 150,
       wordsCount: 55,
+      audioURLPrefix: "audio/mulakshar/"
     },
     mounted: function () {
       fetch("data/mulakshar-sarav.json", { mode: "no-cors" })
@@ -67,6 +68,15 @@
     methods: {
       playSelectedWord(whichIndex, whichMedia) {
         this.addFadeBehaviour(whichIndex);
+        if (sound != null) {
+          sound.stop();
+          sound.unload();
+          sound = null;
+        }
+        sound = new Howl({
+          src: [this.audioURLPrefix + whichMedia + ".mp3"]
+        });
+        sound.play();
       },
       addFadeBehaviour(whichIndex) {
         $("#div" + whichIndex)
