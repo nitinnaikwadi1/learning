@@ -1,0 +1,194 @@
+{
+    "dataFeed": [
+        {
+            "name": " - Beetle",
+            "audio": "12",
+            "video": "assets/videos/beetle.mp4"
+        },
+        {
+            "name": " - Bhoonga",
+            "audio": "13",
+            "video": "assets/videos/bhoonga.mp4"
+        },
+        {
+            "name": " - Big Beak",
+            "audio": "14",
+            "video": "assets/videos/big beak.mp4"
+        },
+        {
+            "name": " - Black Bear",
+            "audio": "15",
+            "video": "assets/videos/black bear.mp4"
+        },
+        {
+            "name": "उंट - Camel",
+            "audio": "2",
+            "video": "assets/videos/camel.mp4"
+        },
+        {
+            "name": "मांजर - Cat",
+            "audio": "11",
+            "video": "assets/videos/manjar.mp4"
+        },
+        {
+            "name": " - Cheetah",
+            "audio": "16",
+            "video": "assets/videos/cheetah.mp4"
+        },
+        {
+            "name": "कोंबडी - Chicken",
+            "audio": "4",
+            "video": "assets/videos/chicken.mp4"
+        },
+        {
+            "name": " - Chimni",
+            "audio": "17",
+            "video": "assets/videos/chimni.mp4"
+        },
+        {
+            "name": " - Crow",
+            "audio": "18",
+            "video": "assets/videos/crow.mp4"
+        },
+        {
+            "name": " - Dog",
+            "audio": "19",
+            "video": "assets/videos/dog.mp4"
+        },
+        {
+            "name": " - Dolphin",
+            "audio": "20",
+            "video": "assets/videos/dolphin.mp4"
+        },
+        {
+            "name": "बदक - Duck",
+            "audio": "5",
+            "video": "assets/videos/duck.mp4"
+        },
+        {
+            "name": " - Eagle",
+            "audio": "21",
+            "video": "assets/videos/eagle.mp4"
+        },
+        {
+            "name": "हत्ती - Elephant",
+            "audio": "6",
+            "video": "assets/videos/elephants.mp4"
+        },
+        {
+            "name": "जिराफ - Giraff",
+            "audio": "7",
+            "video": "assets/videos/giraff.mp4"
+        },
+        {
+            "name": "बहिरी ससाणा - Hawk",
+            "audio": "1",
+            "video": "assets/videos/hawk.mp4"
+        },
+        {
+            "name": "खार - Squirrel",
+            "audio": "3",
+            "video": "assets/videos/squriell.mp4"
+        },
+        {
+            "name": "घोडा - Horse",
+            "audio": "22",
+            "video": "assets/videos/horse.mp4"
+        },
+        {
+            "name": "हमिंगबर्ड - Hummingbird",
+            "audio": "23",
+            "video": "assets/videos/hummingbird.mp4"
+        },
+        {
+            "name": "कबूतर - Kabutar",
+            "audio": "24",
+            "video": "assets/videos/kabutar.mp4"
+        },
+        {
+            "name": "खंड्या - Kingfisher",
+            "audio": "25",
+            "video": "assets/videos/kingfisher.mp4"
+        },
+        {
+            "name": "सिंह - Lion",
+            "audio": "26",
+            "video": "assets/videos/lion.mp4"
+        },
+        {
+            "name": "मेंढी - Sheep",
+            "audio": "8",
+            "video": "assets/videos/sheep.mp4"
+        },
+        {
+            "name": "हंस - Swan",
+            "audio": "9",
+            "video": "assets/videos/swan.mp4"
+        },
+        {
+            "name": "झेब्रा - Zebra",
+            "audio": "10",
+            "video": "assets/videos/zebra.mp4"
+        },
+        {
+            "name": "माकड - Monkey",
+            "audio": "27",
+            "video": "assets/videos/monkey.mp4"
+        },
+        {
+            "name": "घुबड - Owl",
+            "audio": "28",
+            "video": "assets/videos/owl.mp4"
+        },
+        {
+            "name": "मोर - Peacock",
+            "audio": "29",
+            "video": "assets/videos/peacock.mp4"
+        },
+        {
+            "name": "पेंग्विन - Penguine",
+            "audio": "30",
+            "video": "assets/videos/penguine.mp4"
+        },
+        {
+            "name": "फुलपाखरू - Butterfly",
+            "audio": "31",
+            "video": "assets/videos/phoolpakhru.mp4"
+        },
+        {
+            "name": "ध्रुवीय अस्वल - Polar Bear",
+            "audio": "32",
+            "video": "assets/videos/polar bear.mp4"
+        },
+        {
+            "name": "पोपट - Popat",
+            "audio": "33",
+            "video": "assets/videos/popat.mp4"
+        },
+        {
+            "name": "ससा - Rabbit",
+            "audio": "34",
+            "video": "assets/videos/rabbit.mp4"
+        },
+        {
+            "name": "लाल्या - Red Cardinal",
+            "audio": "35",
+            "video": "assets/videos/red cardinal.mp4"
+        },
+        {
+            "name": "वाघ - Tiger",
+            "audio": "36",
+            "video": "assets/videos/tiger.mp4"
+        },
+        {
+            "name": "समुद्रपक्षी - Seagull",
+            "audio": "37",
+            "video": "assets/videos/seagull.mp4"
+        },
+        {
+            "name": "कासव - Turtle",
+            "audio": "38",
+            "video": "assets/videos/turtle.mp4"
+        }
+    ]
+}

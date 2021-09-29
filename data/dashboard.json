@@ -167,6 +167,24 @@
             "audio": "bell",
             "link" : "screen.html",
             "style":"card bg-c-pink item-card"
+        },
+        {
+            "text": "प्राणी ओळख",
+            "audio": "bell",
+            "link" : "animals.html",
+            "style":"card bg-c-yellow item-card"
+        },
+        {
+            "text": "रंग ओळख",
+            "audio": "bell",
+            "link" : "rangolakh.html",
+            "style":"card bg-c-green item-card"
+        },
+        {
+            "text": "आकार ओळख",
+            "audio": "bell",
+            "link" : "shapes.html",
+            "style":"card bg-c-blue item-card"
         }
     ]
 }

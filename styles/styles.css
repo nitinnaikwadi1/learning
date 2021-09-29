@@ -221,7 +221,7 @@ body, #root {
   position: fixed;
   bottom: 0;
   margin-left: -2px;
-  height: 70px;
+  height: 55px;
   width: 100%;
   color: #000;
   background-color: #fff;
@@ -230,7 +230,7 @@ body, #root {
 
 .back-button {
   justify-content: center;
-  margin: 8px;
+  margin: 5px;
 }
 
 .play-button {
@@ -304,7 +304,7 @@ hr.seperate {
 }
 
 .card .card-block {
-  padding: 25px;
+  padding: 10px;
   text-align: center;
   font-family: numpadUnicode;
 }
@@ -376,4 +376,54 @@ hr.seperate {
 		transform: scale(0.95);
 		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
 	}
+}
+
+.fullMedia {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 4rem;
+  font-family: genericUnicode;
+}
+
+h3 {
+  color: white;
+  font-size: 2.5rem;
+  padding-right: 20px;
+}
+
+.fullMedia-caption {
+  position: fixed;
+  bottom: 0;
+  padding:30px;
+  width: 100%;
+}
+
+.fullMedia-controls {
+  position: fixed;
+  bottom: 22px;
+  text-align: right;
+  width: 98%;
+}
+
+.fullShape {
+  height: 100vh;
+  width: 100vw;
+  object-fit: scale-down;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
