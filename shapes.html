@@ -22,7 +22,7 @@
 <body style="border: none !important;background: #029191 !important;">
   <div id="app">
     <div v-for="(card,index) in dataFeed">
-        <video autoplay loop muted playsinline :src='card.shape' controls="false" style="pointer-events: none;" type='video/mp4' class="fullShape"></video>
+        <video autoplay loop muted playsinline :src='card.shape' controls="true" style="pointer-events: none;" type='video/mp4' class="fullShape"></video>
       
 
       <h1 class="fullMedia-caption" :style='"color:"+card.textColor'>{{card.name}}</h1>
