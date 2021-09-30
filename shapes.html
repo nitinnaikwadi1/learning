@@ -24,7 +24,7 @@
     <div v-for="(card,index) in dataFeed" id="parent">
       <script>
         var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-        var iVideoDiv = "<video loop autoplay muted playsinline controls='false' autoplay='autoplay' type='video/mp4' :src='card.shape'></video>";
+        var iVideoDiv = "<video loop autoplay muted playsinline controls='false' autoplay='autoplay' width='100%' height='100%' type='video/mp4' :src='card.shape'></video>";
         var regularDiv = "<video :src='card.shape' autoplay loop muted playsinline class='fullShape'></video>";
         if (is_safari)
           document.write(iVideoDiv);
