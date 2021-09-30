@@ -21,9 +21,16 @@
 
 <body style="border: none !important;background: #029191 !important;">
   <div id="app">
-    <div v-for="(card,index) in dataFeed">
-      <video loop autoplay muted playsinline controls="false" autoplay="autoplay" 
-        :src='card.shape' type="video/mp4"></video>
+    <div v-for="(card,index) in dataFeed" id="parent">
+      <script>
+        var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        var iVideoDiv = "<video loop autoplay muted playsinline controls='false' autoplay='autoplay' type='video/mp4' :src='card.shape'></video>";
+        var regularDiv = "<video :src='card.shape' autoplay loop muted playsinline class='fullShape'></video>";
+        if (is_safari)
+          document.write(iVideoDiv);
+        else
+          document.write(regularDiv);
+      </script>
 
       <h1 class="fullMedia-caption" :style='"color:"+card.textColor'>{{card.name}}</h1>
     </div>
