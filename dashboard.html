@@ -18,7 +18,7 @@
       <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card)" class="col-md-4 col-xl-3 col-xs-6 col-sm-6 col-lg-6">
         <div :class='card.style'>
           <div class="card-block">
-            <h2 class="disableTextSelection">{{card.text}}</h2>
+            <h4 class="disableTextSelection">{{card.text}}</h4>
           </div>
         </div>
       </div>

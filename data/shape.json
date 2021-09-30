@@ -2,7 +2,7 @@
     "dataFeed": [
         {
             "name": "गोल - Circle",
-            "shape": "assets/shapes/circle.mp4",
+            "shape": "assets/shapes/circle.mov",
             "textColor": "white"
         },
         {
