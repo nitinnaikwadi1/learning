@@ -22,7 +22,7 @@
 <body style="border: none !important;background: #029191 !important;">
   <div id="app">
     <div v-for="(card,index) in dataFeed">
-      <video autoplay loop muted playsinline class="fullShape">
+      <video autoplay loop muted playsinline preload="metadata" class="fullShape">
         <source :src='card.shape' type="video/mov">
       </video>
 
