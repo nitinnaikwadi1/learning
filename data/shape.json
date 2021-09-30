@@ -2,7 +2,7 @@
     "dataFeed": [
         {
             "name": "गोल - Circle",
-            "shape": "assets/shapes/circle.mov",
+            "shape": "https://github.com/nitinnaikwadi1/learning/raw/master/assets/shapes/1circle.mp4",
             "textColor": "white"
         },
         {
