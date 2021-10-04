@@ -156,7 +156,7 @@ label {
 
 .back-button:hover{
   text-shadow: 1.7px 1.7px 1.7px rgba(0, 0, 0, 0.5);
-  font-size: 3.1em;
+  font-size: 2.1em;
 }
 
 @keyframes fadeEffect {
@@ -221,7 +221,7 @@ body, #root {
   position: fixed;
   bottom: 0;
   margin-left: -2px;
-  height: 55px;
+  height: 45px;
   width: 100%;
   color: #000;
   background-color: #fff;
@@ -392,8 +392,8 @@ hr.seperate {
 
 h1 {
   font-weight: bold;
-  font-size: 4rem;
-  font-family: genericUnicode;
+  font-size:5vw;
+  font-family: numpadUnicode;
 }
 
 h3 {
@@ -410,16 +410,9 @@ h4 {
 
 .fullMedia-caption {
   position: fixed;
-  bottom: 0;
-  padding:30px;
+  bottom: 50px;
   width: 100%;
-}
-
-.fullMedia-controls {
-  position: fixed;
-  bottom: 22px;
-  text-align: right;
-  width: 98%;
+  text-align: center;
 }
 
 .fullShape {
@@ -432,4 +425,28 @@ h4 {
   top: 0;
   bottom: 0;
   z-index: -1;
+}
+
+.content-bg {
+    background-position: center center;
+    background-attachment: fixed;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height: 99vh;
+}
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+  h1 {
+    color: white;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 480px) {
+  h1 {
+    color: black;
+  }
 }

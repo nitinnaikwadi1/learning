@@ -185,6 +185,24 @@
             "audio": "bell",
             "link" : "shapes.html",
             "style":"card bg-c-blue item-card"
+        },
+        {
+            "text": "झाडांची ओळख",
+            "audio": "bell",
+            "link" : "trees.html",
+            "style":"card bg-c-blue item-card"
+        },
+        {
+            "text": "फळांची ओळख",
+            "audio": "bell",
+            "link" : "fruits.html",
+            "style":"card bg-c-blue item-card"
+        },
+        {
+            "text": "फुलांची ओळख",
+            "audio": "bell",
+            "link" : "flowers.html",
+            "style":"card bg-c-blue item-card"
         }
     ]
 }

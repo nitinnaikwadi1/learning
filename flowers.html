@@ -7,7 +7,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
-  <link rel="stylesheet" href="styles/styles.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="manifest" href="manifest.json">
@@ -19,19 +19,20 @@
   <meta name="theme-color" content="#FFE1C4">
 </head>
 
-<body>
+<body style="border: none !important;">
   <div id="app">
-    <ul class="auto-grid-generic container">
-      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)">
-        <li :id='"div"+index' class="disableTextSelection mulakshar card-fill">{{card.text}}</li>
-      </div>
-    </ul>
-    <footer class="footer">
-      <div class="center-div">
-        <i class="fab fa-microsoft fa-2x back-button" style="color:#961a42;"
-          onclick="location.href='dashboard.html';"></i>
-      </div>
-    </footer>
+    <div v-for="(card,index) in dataFeed">
+      <img :src='card.flower' class="content-bg" >
+      <h1 class="fullMedia-caption">{{card.name}}</h1>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="center-div">
+      <i class="fab fa-microsoft fa-2x back-button" style="color:#961a42;"
+        onclick="location.href='dashboard.html';"></i>
+      <i class="fas fa-sync-alt fa-2x back-button" style="color:#961a42;" onclick="location.href=location.href"></i>
+    </div>
+  </footer>
   </div>
 </body>
 
@@ -42,21 +43,30 @@
     el: '#app',
     data: {
       dataFeed: [],
-      animDelay: 150,
-      audioURLPrefix: "audio/mulakshar/"
+      animDelay: 50,
+      wordsCount: 1,
+      audioURLPrefix: "audio/1te100/"
     },
     mounted: function () {
-      fetch('data/mulakshar-wisarg.json', { mode: 'no-cors' })
+      fetch('data/flowers.json', { mode: 'no-cors' })
         .then(response => response.json())
         .then(data => {
-          this.dataFeed = data.dataFeed;
+          //generating required random indexs array from available words data
+          //then identifying random seleted indices data from json
+          //finally returning words to ui
+
+          for (i = 0; i < this.wordsCount; i++) {
+
+            const currentIndex = this.getRandomInt(0, data.dataFeed.length);
+            this.dataFeed.push(data.dataFeed[currentIndex]);
+            console.log(JSON.stringify(this.dataFeed));
+          }
         })
     },
     created: function () { },
     computed: {},
     methods: {
       playSelectedWord(whichIndex, whichMedia) {
-        this.addFadeBehaviour(whichIndex);
         if (sound != null) {
           sound.stop();
           sound.unload();
@@ -66,10 +76,14 @@
           src: [this.audioURLPrefix + whichMedia + ".mp3"]
         });
         sound.play();
+        this.addFadeBehaviour(whichIndex);
       },
       addFadeBehaviour(whichIndex) {
         $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
           fadeOut(this.animDelay).fadeIn(this.animDelay);
+      },
+      getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
       },
     },
   })

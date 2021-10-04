@@ -1,22 +1,22 @@
 {
     "dataFeed": [
         {
-            "name": " - Beetle",
+            "name": "सोनकिडा - Beetle",
             "audio": "12",
             "video": "assets/videos/beetle.mp4"
         },
         {
-            "name": " - Bhoonga",
+            "name": "भुंगा - Dragonfly",
             "audio": "13",
             "video": "assets/videos/bhoonga.mp4"
         },
         {
-            "name": " - Big Beak",
+            "name": "धनेश - Hornbill",
             "audio": "14",
             "video": "assets/videos/big beak.mp4"
         },
         {
-            "name": " - Black Bear",
+            "name": "अस्वल - Black Bear",
             "audio": "15",
             "video": "assets/videos/black bear.mp4"
         },
@@ -31,7 +31,7 @@
             "video": "assets/videos/manjar.mp4"
         },
         {
-            "name": " - Cheetah",
+            "name": "चित्ता - Cheetah",
             "audio": "16",
             "video": "assets/videos/cheetah.mp4"
         },
@@ -41,22 +41,22 @@
             "video": "assets/videos/chicken.mp4"
         },
         {
-            "name": " - Chimni",
+            "name": "चिमणी - Sparrow",
             "audio": "17",
             "video": "assets/videos/chimni.mp4"
         },
         {
-            "name": " - Crow",
+            "name": "कावळा - Crow",
             "audio": "18",
             "video": "assets/videos/crow.mp4"
         },
         {
-            "name": " - Dog",
+            "name": "कुत्रा - Dog",
             "audio": "19",
             "video": "assets/videos/dog.mp4"
         },
         {
-            "name": " - Dolphin",
+            "name": "डॉल्फिन - Dolphin",
             "audio": "20",
             "video": "assets/videos/dolphin.mp4"
         },
@@ -66,7 +66,7 @@
             "video": "assets/videos/duck.mp4"
         },
         {
-            "name": " - Eagle",
+            "name": "गरुड - Eagle",
             "audio": "21",
             "video": "assets/videos/eagle.mp4"
         },
@@ -101,7 +101,7 @@
             "video": "assets/videos/hummingbird.mp4"
         },
         {
-            "name": "कबूतर - Kabutar",
+            "name": "कबूतर - Pigeon",
             "audio": "24",
             "video": "assets/videos/kabutar.mp4"
         },
@@ -161,7 +161,7 @@
             "video": "assets/videos/polar bear.mp4"
         },
         {
-            "name": "पोपट - Popat",
+            "name": "पोपट - Parrot",
             "audio": "33",
             "video": "assets/videos/popat.mp4"
         },

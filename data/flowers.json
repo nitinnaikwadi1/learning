@@ -1,0 +1,10 @@
+{
+    "dataFeed": [
+        {
+            "name": "झेंडू - Marigold",
+            "audio": "1",
+            "flower": "assets/flowers/marigold.jpg",
+            "textColor": "white"
+        }
+    ]
+}
