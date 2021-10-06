@@ -15,10 +15,10 @@
   <script src="js/background.js"></script>
   <div id="app" class="container">
     <div class="row">
-      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card)" class="col-md-4 col-xl-3 col-xs-6 col-sm-6 col-lg-6">
+      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card)" class="col-md-4 col-xl-3 col-xs-6 col-sm-6 col-lg-4">
         <div :class='card.style'>
           <div class="card-block">
-            <h4 class="disableTextSelection">{{card.text}}</h4>
+            <h1 class="disableTextSelection">{{card.text}}</h1>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
 </script>
 <!-- events such as fade and play audio when card is clicked -->
 
-<!-- register service worker 
+<!-- register service worker -->
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
@@ -67,6 +67,6 @@
     });
   }
 </script>
- end of service worker -->
+<!-- end of service worker -->
 
 </html>
