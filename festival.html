@@ -8,6 +8,8 @@
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="manifest" href="manifest.json">
@@ -21,9 +23,55 @@
 
 <body style="border: none !important;">
   <div id="app">
-    <div v-for="(card,index) in dataFeed">
-      <img :src='card.fruit' class="content-bg" >
-      <h1 class="fullMedia-caption">{{card.name}}</h1>
+    <div class="container">
+      <main class="grid">
+        <article>
+          <img src="./assets/eng-months/jan.png" alt="Sample photo">
+        </article>
+        <article>
+          <img src="./assets/eng-months/feb.png" alt="Sample photo">
+
+        </article>
+        <article>
+          <img src="./assets/eng-months/mar.png" alt="Sample photo">
+
+        </article>
+        <article>
+          <img src="./assets/eng-months/april.png" alt="Sample photo">
+
+        </article>
+        <article>
+          <img src="./assets/eng-months/may.png" alt="Sample photo">
+
+        </article>
+        <article>
+          <img src="./assets/eng-months/june.png" alt="Sample photo">
+
+        </article>
+        <article>
+          <img src="./assets/eng-months/july.png" alt="Sample photo">
+
+        </article>
+        <article>
+          <img src="./assets/eng-months/aug.png" alt="Sample photo">
+
+        </article>
+        <article>
+          <img src="./assets/eng-months/sept.png" alt="Sample photo">
+          
+        </article>
+        <article>
+          <img src="./assets/eng-months/oct.png" alt="Sample photo">
+
+        </article>
+        <article>
+          <img src="./assets/eng-months/nov.png" alt="Sample photo">
+
+        </article>
+        <article>
+          <img src="./assets/eng-months/dec.png" alt="Sample photo">
+        </article>
+      </main>
     </div>
   </div>
   <footer class="footer">
@@ -48,7 +96,7 @@
       audioURLPrefix: "audio/1te100/"
     },
     mounted: function () {
-      fetch('data/fruits.json', { mode: 'no-cors' })
+      fetch('data/festival.json', { mode: 'no-cors' })
         .then(response => response.json())
         .then(data => {
           //generating required random indexs array from available words data

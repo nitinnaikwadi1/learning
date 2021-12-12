@@ -3,206 +3,254 @@
         {
             "text": "A B C B",
             "audio": "bell",
-            "link" : "abcd.html",
-            "style":"card bg-c-blue item-card"
+            "link": "abcd.html",
+            "style": "card bg-c-blue item-card"
         },
         {
             "text": "इंग्रजी अंक",
             "audio": "bell",
-            "link" : "numbers.html",
-            "style":"card bg-c-yellow item-card"
+            "link": "numbers.html",
+            "style": "card bg-c-yellow item-card"
         },
         {
             "text": "अंक सराव",
             "audio": "bell",
-            "link" : "ank-random.html",
-            "style":"card bg-c-green item-card"
+            "link": "ank-random.html",
+            "style": "card bg-c-green item-card"
         },
         {
             "text": "शब्द ओळखा",
             "audio": "bell",
-            "link" : "shabdsarav.html",
-            "style":"card bg-c-pink item-card"
+            "link": "shabdsarav.html",
+            "style": "card bg-c-pink item-card"
         },
         {
             "text": "अंक ओळखा",
             "audio": "bell",
-            "link" : "anksarav.html",
-            "style":"card bg-c-pink item-card"
+            "link": "anksarav.html",
+            "style": "card bg-c-pink item-card"
         },
         {
             "text": "अक्षर सराव",
             "audio": "bell",
-            "link" : "mulaksharsarav.html",
-            "style":"card bg-c-green item-card"
+            "link": "mulaksharsarav.html",
+            "style": "card bg-c-green item-card"
         },
         {
-            "text": "शब्द वाचन",
+            "text": "सोपे शब्द",
             "audio": "bell",
-            "link" : "words.html",
-            "style":"card bg-c-yellow item-card"
+            "link": "words.html",
+            "style": "card bg-c-yellow item-card"
+        },
+        {
+            "text": "जोड शब्द",
+            "audio": "bell",
+            "link": "jodshabd.html",
+            "style": "card bg-c-blue item-card"
         },
         {
             "text": "वाक्य वाचन",
             "audio": "bell",
-            "link" : "vakyasarav.html",
-            "style":"card bg-c-green item-card"
+            "link": "vakyasarav.html",
+            "style": "card bg-c-green item-card"
         },
         {
             "text": "मुळाक्षरे",
             "audio": "bell",
-            "link" : "mulakshar.html",
-            "style":"card bg-c-green item-card"
+            "link": "mulakshar.html",
+            "style": "card bg-c-green item-card"
         },
         {
             "text": "मराठी अंक",
             "audio": "bell",
-            "link" : "ank.html",
-            "style":"card bg-c-blue item-card"
+            "link": "ank.html",
+            "style": "card bg-c-blue item-card"
         },
         {
             "text": "१ ते १०० अंक",
             "audio": "bell",
-            "link" : "1te100.html",
-            "style":"card bg-c-pink item-card"
+            "link": "1te100.html",
+            "style": "card bg-c-pink item-card"
         },
         {
             "text": "1 - 100",
             "audio": "bell",
-            "link" : "1to100.html",
-            "style":"card bg-c-yellow item-card"
+            "link": "1to100.html",
+            "style": "card bg-c-yellow item-card"
         },
         {
             "text": "काना",
             "audio": "bell",
-            "link" : "kana.html",
-            "style":"card bg-c-yellow item-card"
+            "link": "kana.html",
+            "style": "card bg-c-yellow item-card"
         },
         {
             "text": "पहिली वेलांटी",
             "audio": "bell",
-            "link" : "pahiliwelanti.html",
-            "style":"card bg-c-pink item-card"
+            "link": "pahiliwelanti.html",
+            "style": "card bg-c-pink item-card"
         },
         {
             "text": "दुसरी वेलांटी",
             "audio": "bell",
-            "link" : "dusriwelanti.html",
-            "style":"card bg-c-green item-card"
+            "link": "dusriwelanti.html",
+            "style": "card bg-c-green item-card"
         },
         {
             "text": "पहिला ऊकार",
             "audio": "bell",
-            "link" : "pahilaukar.html",
-            "style":"card bg-c-blue item-card"
+            "link": "pahilaukar.html",
+            "style": "card bg-c-blue item-card"
         },
         {
             "text": "दुसरा ऊकार",
             "audio": "bell",
-            "link" : "dusraukar.html",
-            "style":"card bg-c-green item-card"
+            "link": "dusraukar.html",
+            "style": "card bg-c-green item-card"
         },
         {
             "text": "एक मात्रा",
             "audio": "bell",
-            "link" : "ekmatra.html",
-            "style":"card bg-c-yellow item-card"
+            "link": "ekmatra.html",
+            "style": "card bg-c-yellow item-card"
         },
         {
             "text": "दोन मात्रा",
             "audio": "bell",
-            "link" : "donmatra.html",
-            "style":"card bg-c-blue item-card"
+            "link": "donmatra.html",
+            "style": "card bg-c-blue item-card"
         },
         {
             "text": "काना एक मात्रा",
             "audio": "bell",
-            "link" : "kanaekmatra.html",
-            "style":"card bg-c-pink item-card"
+            "link": "kanaekmatra.html",
+            "style": "card bg-c-pink item-card"
         },
         {
             "text": "काना दोन मात्रा",
             "audio": "bell",
-            "link" : "kanadonmatra.html",
-            "style":"card bg-c-yellow item-card"
+            "link": "kanadonmatra.html",
+            "style": "card bg-c-yellow item-card"
         },
         {
             "text": "अनुस्वार",
             "audio": "bell",
-            "link" : "anuswar.html",
-            "style":"card bg-c-green item-card"
+            "link": "anuswar.html",
+            "style": "card bg-c-green item-card"
         },
         {
             "text": "अर्धचंद्र",
             "audio": "bell",
-            "link" : "ardhchandr.html",
-            "style":"card bg-c-pink item-card"
+            "link": "ardhchandr.html",
+            "style": "card bg-c-pink item-card"
         },
         {
             "text": "काना अर्धचंद्र",
             "audio": "bell",
-            "link" : "kanaardhchandr.html",
-            "style":"card bg-c-blue item-card"
+            "link": "kanaardhchandr.html",
+            "style": "card bg-c-blue item-card"
         },
         {
             "text": "विसर्ग",
             "audio": "bell",
-            "link" : "wisarg.html",
-            "style":"card bg-c-green item-card"
+            "link": "wisarg.html",
+            "style": "card bg-c-green item-card"
         },
         {
             "text": "a b c d",
             "audio": "bell",
-            "link" : "abcdsmall.html",
-            "style":"card bg-c-yellow item-card"
+            "link": "abcdsmall.html",
+            "style": "card bg-c-yellow item-card"
         },
         {
             "text": "अंक बनवा",
             "audio": "bell",
-            "link" : "numpad.html",
-            "style":"card bg-c-blue item-card"
+            "link": "numpad.html",
+            "style": "card bg-c-blue item-card"
         },
         {
             "text": "शब्द बनवा",
             "audio": "bell",
-            "link" : "screen.html",
-            "style":"card bg-c-pink item-card"
+            "link": "screen.html",
+            "style": "card bg-c-pink item-card"
         },
         {
             "text": "प्राणी ओळख",
             "audio": "bell",
-            "link" : "animals.html",
-            "style":"card bg-c-yellow item-card"
+            "link": "animals.html",
+            "style": "card bg-c-yellow item-card"
+        },
+        {
+            "text": "मराठी महिने",
+            "audio": "bell",
+            "link": "mahine.html",
+            "style": "card bg-c-green item-card"
+        },
+        {
+            "text": "इंग्रजी महिने",
+            "audio": "bell",
+            "link": "months.html",
+            "style": "card bg-c-blue item-card"
+        },
+        {
+            "text": "पक्षी ओळख",
+            "audio": "bell",
+            "link": "birds.html",
+            "style": "card bg-c-pink item-card"
+        },
+        {
+            "text": "कीटक ओळख",
+            "audio": "bell",
+            "link": "kitak.html",
+            "style": "card bg-c-blue item-card"
+        },
+        {
+            "text": "समुद्र ओळख",
+            "audio": "bell",
+            "link": "aquatic.html",
+            "style": "card bg-c-yellow item-card"
         },
         {
             "text": "रंग ओळख",
             "audio": "bell",
-            "link" : "rangolakh.html",
-            "style":"card bg-c-green item-card"
+            "link": "rangolakh.html",
+            "style": "card bg-c-green item-card"
         },
         {
             "text": "आकार ओळख",
             "audio": "bell",
-            "link" : "shapes.html",
-            "style":"card bg-c-blue item-card"
+            "link": "shapes.html",
+            "style": "card bg-c-blue item-card"
         },
         {
             "text": "झाडांची ओळख",
             "audio": "bell",
-            "link" : "trees.html",
-            "style":"card bg-c-blue item-card"
+            "link": "trees.html",
+            "style": "card bg-c-blue item-card"
         },
         {
             "text": "फळांची ओळख",
             "audio": "bell",
-            "link" : "fruits.html",
-            "style":"card bg-c-blue item-card"
+            "link": "fruits.html",
+            "style": "card bg-c-blue item-card"
         },
         {
             "text": "फुलांची ओळख",
             "audio": "bell",
-            "link" : "flowers.html",
-            "style":"card bg-c-blue item-card"
+            "link": "flowers.html",
+            "style": "card bg-c-blue item-card"
+        },
+        {
+            "text": "सणांची ओळख",
+            "audio": "bell",
+            "link": "festival.html",
+            "style": "card bg-c-blue item-card"
+        },
+        {
+            "text": "पिकांचे हंगाम",
+            "audio": "bell",
+            "link": "crops.html",
+            "style": "card bg-c-pink item-card"
         }
     ]
 }

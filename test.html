@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,68 +8,135 @@
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
   <link rel="stylesheet" href="styles/styles.css">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-  <style>
-    .learning-card {      
-      padding: 0.5rem;
-      background-color: #43929A;
-      font-family: genericUnicode;
-      color: #fff;
-      text-align: center;
-      font-size: calc(3vw + 3vh + 2vmin);
-      text-decoration: none;
-      border-style: solid;
-      border-width: thin;
-    }
-  </style>
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="manifest" href="manifest.json">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/images/logo-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+  <meta name="theme-color" content="#FFE1C4">
 </head>
 
-<body>
-  <div id="app" class="container">
-    <div class="row">
-      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card.audio)" class="col col-4 col-sm-3 col-md-2 col-lg-1 learning-card">
-        <span :id='"div"+index' class="disableTextSelection">{{card.text}}</span>
-      </div>
+<body style="border: none !important;">
+  <div id="app">
+    <div class="container">
+      <main class="grid">
+        <article>
+          <img src="./assets/eng-months/jan.png" alt="Sample photo">
+          <div class="text">
+            
+            
+            <a href="location.hfef" class="btn btn-primary btn-block">Here's why</a>
+          </div>
+        </article>
+        <article>
+          <img src="./assets/feb.png" alt="Sample photo">
+          <div class="text">
+            
+            <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Here's how</a>
+          </div>
+        </article>
+        <article>
+          <img src="https://picsum.photos/600/400?image=1056" alt="Sample photo">
+          <div class="text">
+            <h3>Dynamically Procrastinate</h3>
+            <p>Completely synergize resource taxing relationships via premier niche markets.</p>
+            <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Read more</a>
+          </div>
+        </article>
+        <article>
+          <img src="https://picsum.photos/600/400?image=1050" alt="Sample photo">
+          <div class="text">
+            <h3>Best in class</h3>
+            <p>Imagine jumping into that boat, and just letting it sail wherever the wind takes you...</p>
+            <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Just do it...</a>
+          </div>
+        </article>
+        <article>
+          <img src="https://picsum.photos/600/400?image=1041" alt="Sample photo">
+          <div class="text">
+            <h3>Dynamically innovate supply chains</h3>
+            <p>Holisticly predominate extensible testing procedures for reliable supply chains.</p>
+            <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Here's why</a>
+          </div>
+        </article>
+        <article>
+          <img src="https://picsum.photos/600/400?image=1015" alt="Sample photo">
+          <div class="text">
+            <h3>Sanity check</h3>
+            <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
+            <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Stop here</a>
+          </div>
+        </article>
+      </main>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="center-div">
+      <i class="fab fa-microsoft fa-2x back-button" style="color:#961a42;"
+        onclick="location.href='dashboard.html';"></i>
+      <i class="fas fa-sync-alt fa-2x back-button" style="color:#961a42;" onclick="location.href=location.href"></i>
+    </div>
+  </footer>
   </div>
 </body>
 
-<!-- events such as fade and play audio when cards is clicked -->
+<!-- events such as fade and play audio when card is clicked -->
 <script>
+  var sound = null;
   var app = new Vue({
     el: '#app',
     data: {
       dataFeed: [],
-      animDelay: 150,
-      audioURLPrefix: "audio/ank/",
-      feedURLPrefix:  "data/"
+      animDelay: 50,
+      wordsCount: 1,
+      audioURLPrefix: "audio/1te100/"
     },
     mounted: function () {
-      fetch('data/ank.json', {mode: 'no-cors'})
+      fetch('data/festival.json', { mode: 'no-cors' })
         .then(response => response.json())
         .then(data => {
-          this.dataFeed = data.dataFeed;
+          //generating required random indexs array from available words data
+          //then identifying random seleted indices data from json
+          //finally returning words to ui
+
+          for (i = 0; i < this.wordsCount; i++) {
+
+            const currentIndex = this.getRandomInt(0, data.dataFeed.length);
+            this.dataFeed.push(data.dataFeed[currentIndex]);
+            console.log(JSON.stringify(this.dataFeed));
+          }
         })
     },
-    created: function () {},
+    created: function () { },
     computed: {},
     methods: {
       playSelectedWord(whichIndex, whichMedia) {
-        this.addFadeBehaviour(whichIndex);
-        var sound = new Howl({
+        if (sound != null) {
+          sound.stop();
+          sound.unload();
+          sound = null;
+        }
+        sound = new Howl({
           src: [this.audioURLPrefix + whichMedia + ".mp3"]
         });
         sound.play();
+        this.addFadeBehaviour(whichIndex);
       },
       addFadeBehaviour(whichIndex) {
         $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
           fadeOut(this.animDelay).fadeIn(this.animDelay);
       },
+      getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+      },
     },
   })
 </script>
-<!-- events such as fade and play audio when cards is clicked -->
+<!-- events such as fade and play audio when card is clicked -->
 
 </html>

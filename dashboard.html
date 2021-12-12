@@ -5,7 +5,6 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/howler.min.js"></script>
   <script src="js/vue.js"></script>
-
   <script>
     $(function () { $("head").load("header.html") });
   </script>
@@ -15,7 +14,8 @@
   <script src="js/background.js"></script>
   <div id="app" class="container">
     <div class="row">
-      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card)" class="col-md-4 col-xl-3 col-xs-6 col-sm-6 col-lg-4">
+      <div v-for="(card,index) in dataFeed" @click.prevent="playSelectedWord(index,card)"
+        class="col-md-4 col-xl-3 col-xs-6 col-sm-6 col-lg-4">
         <div :class='card.style'>
           <div class="card-block">
             <h1 class="disableTextSelection">{{card.text}}</h1>
@@ -33,7 +33,6 @@
     el: '#app',
     data: {
       dataFeed: [],
-      animDelay: 120,
     },
     mounted: function () {
       fetch('data/dashboard.json', { mode: 'no-cors' })
@@ -46,19 +45,14 @@
     computed: {},
     methods: {
       playSelectedWord(whichIndex, whichCard) {
-        this.addFadeBehaviour(whichIndex);
         window.location.href = whichCard.link;
-      },
-      addFadeBehaviour(whichIndex) {
-        $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
-          fadeOut(this.animDelay).fadeIn(this.animDelay);
       },
     },
   })
 </script>
 <!-- events such as fade and play audio when card is clicked -->
 
-<!-- register service worker -->
+<!-- register service worker 
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
@@ -67,6 +61,6 @@
     });
   }
 </script>
-<!-- end of service worker -->
+ end of service worker -->
 
 </html>

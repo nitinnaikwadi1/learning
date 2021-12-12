@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/howler.min.js"></script>
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" href="styles/styles.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="manifest" href="manifest.json">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/images/logo-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+  <meta name="theme-color" content="#FFE1C4">
+</head>
+
+<body style="border: none !important;">
+  <div id="app">
+    <div v-for="(card,index) in dataFeed">
+
+      <script>
+        var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        var iVideoDiv = "<video loop autoplay muted playsinline controls='false' autoplay='autoplay' type='video/mp4' width='100%' height='100%' :src='card.video'></video>";
+        var regularDiv = "<video :src='card.video' autoplay loop muted playsinline class='fullMedia'></video>";
+        if (is_safari)
+          document.write(iVideoDiv);
+        else
+          document.write(regularDiv);
+      </script>
+      <h1 class="fullMedia-caption">{{card.name}}</h1>
+      <i class="fas fa-volume-up fa-2x" style="color:springgreen; bottom:50px;padding: 50px;"
+        @click.prevent="playSelectedWord(index,card.audio)"></i>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="center-div">
+      <i class="fab fa-microsoft fa-2x back-button" style="color:#961a42;"
+        onclick="location.href='dashboard.html';"></i>
+      <i class="fas fa-sync-alt fa-2x back-button" style="color:#961a42;" onclick="location.href=location.href"></i>
+    </div>
+  </footer>
+  </div>
+</body>
+
+<!-- events such as fade and play audio when card is clicked -->
+<script>
+  var sound = null;
+  var app = new Vue({
+    el: '#app',
+    data: {
+      dataFeed: [],
+      animDelay: 50,
+      wordsCount: 1,
+      audioURLPrefix: "audio/1te100/"
+    },
+    mounted: function () {
+      fetch('data/birds.json', { mode: 'no-cors' })
+        .then(response => response.json())
+        .then(data => {
+          //generating required random indexs array from available words data
+          //then identifying random seleted indices data from json
+          //finally returning words to ui
+
+          for (i = 0; i < this.wordsCount; i++) {
+
+            const currentIndex = this.getRandomInt(0, data.dataFeed.length);
+            this.dataFeed.push(data.dataFeed[currentIndex]);
+            console.log(JSON.stringify(this.dataFeed));
+          }
+        })
+    },
+    created: function () { },
+    computed: {},
+    methods: {
+      playSelectedWord(whichIndex, whichMedia) {
+        if (sound != null) {
+          sound.stop();
+          sound.unload();
+          sound = null;
+        }
+        sound = new Howl({
+          src: [this.audioURLPrefix + whichMedia + ".mp3"]
+        });
+        sound.play();
+        this.addFadeBehaviour(whichIndex);
+      },
+      addFadeBehaviour(whichIndex) {
+        $("#div" + whichIndex).fadeOut(this.animDelay).fadeIn(this.animDelay).
+          fadeOut(this.animDelay).fadeIn(this.animDelay);
+      },
+      getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+      },
+    },
+  })
+</script>
+<!-- events such as fade and play audio when card is clicked -->
+
+</html>

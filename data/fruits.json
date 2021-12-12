@@ -2,7 +2,7 @@
     "dataFeed": [
         {
             "name": "आंबा - Mango",
-            "audio": "1",
+            "item": "1",
             "fruit": "assets/fruits/mango.jpg",
             "textColor": "white"
         }

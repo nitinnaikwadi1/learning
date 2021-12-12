@@ -32,7 +32,10 @@
         else
           document.write(regularDiv);
       </script>
+
       <h1 class="fullMedia-caption">{{card.name}}</h1>
+      <i class="fas fa-volume-up fa-2x" style="color:springgreen; bottom:50px;padding: 50px;"
+        @click.prevent="playSelectedWord(index,card.audio)"></i>
     </div>
   </div>
 

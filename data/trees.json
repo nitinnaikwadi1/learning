@@ -2,7 +2,7 @@
     "dataFeed": [
         {
             "name": "वटवृक्ष - Banyan",
-            "audio": "1",
+            "item": "1",
             "tree": "assets/trees/vad.jpg",
             "textColor": "white"
         }
