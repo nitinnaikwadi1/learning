@@ -79,13 +79,13 @@
             "textColor": "white"
         },
         {
-            "name": "पळस ",
+            "name": "पळस - Flame tree",
             "item": "14",
             "flower": "assets/flowers/palas.jpg",
             "textColor": "white"
         },
         {
-            "name": "पारिजात",
+            "name": "पारिजात - Night Jasmine",
             "item": "15",
             "flower": "assets/flowers/parijat.jpg",
             "textColor": "white"
@@ -103,7 +103,7 @@
             "textColor": "white"
         },
         {
-            "name": "ताम्हण ",
+            "name": "ताम्हण - Queen Crape",
             "item": "18",
             "flower": "assets/flowers/tamhan.jpg",
             "textColor": "white"
@@ -115,7 +115,7 @@
             "textColor": "white"
         },
         {
-            "name": "तरवड ",
+            "name": "तरवड - Tanner's Cassia",
             "item": "20",
             "flower": "assets/flowers/tarvad.jpg",
             "textColor": "white"
